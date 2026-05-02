@@ -1,118 +1,128 @@
 # Structurally Constrained PINNs for Barrier Option Pricing
 
+This repository is the reproducibility package for the working paper:
 
+**Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Differences**
 
-This repository accompanies the working paper:
+SSRN working paper: forthcoming. Replace this line with the assigned SSRN URL after upload.
 
+GitHub repository: <https://github.com/uiclxh/structurally-constrained-pinns-barrier-options>
 
+## Overview
 
-**Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Difference**
+This project studies whether structurally constrained physics-informed neural networks can be made credible for continuously monitored down-and-out European call option pricing under the Black-Scholes framework.
 
+Barrier options are a demanding test case for neural PDE solvers because the absorbing boundary creates a localized high-curvature region near the knockout boundary. A model can look acceptable under average pricing error while still failing near the barrier, especially in Delta, Gamma, and boundary consistency.
 
+The project compares a strong implicit finite-difference benchmark with barrier-aware neural surrogates. The retained neural framework combines transformed coordinates, hard barrier enforcement, barrier-aware adaptive collocation, hybrid optimization, and protocol-based validation.
 
-The project studies whether physics-informed neural surrogates can be made credible for continuously monitored down-and-out European call options under the Black-Scholes framework. The central emphasis is not only pricing accuracy, but also barrier consistency, Greek stability, residual diagnostics, benchmark strength, and deployment economics.
+## Reproducibility Status
 
+This is a curated reproducibility package, not a clean-room rebuild.
 
+The repository provides the final working paper, generated figures, generated tables, trained model artifacts, validation scorecards, residual diagnostics, and chapter-level summary files used by the manuscript. Some workflows can be rerun from `src/`, but the repository is not yet a fully packaged one-command software system that rebuilds every result from a fresh environment.
 
-## Project Overview
+For details, see [docs/reproducibility.md](docs/reproducibility.md).
 
+## Core Results
 
-
-Barrier options are a demanding test case for neural PDE solvers because the absorbing barrier creates a localized high-curvature region near the knockout boundary. A model that performs well on average pricing error may still fail in the near-barrier region, especially for Delta and Gamma.
-
-
-
-This project compares a strong implicit finite-difference benchmark with structurally constrained neural surrogates. The retained neural framework combines transformed coordinates, hard barrier enforcement, barrier-aware adaptive collocation, hybrid optimization, and protocol-based validation.
-
-
-
-## Research Questions
-
-
-
-1. Why do naive PINNs fail in near-barrier high-curvature regimes?
-
-2. Which structural constraints and sampling mechanisms stabilize neural surrogates for barrier PDEs?
-
-3. How should prices, Greeks, boundary consistency, and residual diagnostics be jointly validated?
-
-4. When does offline-online amortization make neural surrogates economically attractive relative to a strong finite-difference benchmark?
-
-
-
-## Main Contributions
-
-
-
-- A high-precision implicit finite-difference benchmark using log-domain transformation, exact barrier alignment, Rannacher-smoothed Crank-Nicolson stepping, and sparse linear solves.
-
-- A barrier-aware neural surrogate framework with hard structural enforcement of the absorbing boundary.
-
-- A validation protocol that jointly evaluates price error, Delta, Gamma, barrier residuals, positivity, and PDE residual diagnostics.
-
-- Ablation evidence showing that transformed coordinates, hard barrier constraints, and barrier-aware sampling materially improve learned behavior.
-
-- A deployment-economics analysis comparing one-off solves with repeated-query workloads.
-
-
+- The implicit finite-difference benchmark remains the strongest method for local pricing accuracy and Greek-sensitive tasks.
+- Naive PINNs fail systematically in near-barrier high-curvature regimes.
+- Hard barrier enforcement and barrier-aware adaptive collocation materially improve learned behavior.
+- The barrier-aware PINN is the strongest learned model in near-barrier Gamma control and boundary consistency.
+- No learned surrogate passes the full validation protocol in the current workflow.
+- Learned surrogates become economically relevant only under sufficiently large repeated-query workloads and acceptable task-specific error tolerance.
 
 ## Repository Structure
 
-
-
 ```text
-
 paper/
+  Final working paper PDF.
 
-&#x20; Final working paper PDF.
+src/
+  Chapter-level Python research scripts.
 
+scripts/
+  Reproduction helper scripts.
 
+docs/
+  SSRN notes, project summary, and reproducibility statement.
 
-results/results\_chapter3\_only/
+results/
+  Curated chapter-level result packages from Chapter 3 through Chapter 10.
 
-&#x20; High-precision implicit finite-difference benchmark and convergence verification.
+figures/
+  Selected figure and table-image exports for quick browsing.
 
+tables/
+  Selected CSV and LaTeX table exports for quick inspection.
 
+models/
+  Trained surrogate model artifacts and related metadata.
+```
 
-results/results\_chapter4\_only/
+## Chapter Map
 
-&#x20; Barrier-aware neural surrogate framework, architecture tables, loss terms, and initial model artifact.
+| Chapter | Folder | Purpose |
+| --- | --- | --- |
+| 3 | `results/results_chapter3_only/` | High-precision implicit finite-difference benchmark and convergence verification. |
+| 4 | `results/results_chapter4_only/` | Barrier-aware neural surrogate framework, architecture tables, loss terms, and initial model artifact. |
+| 5 | `results/results_chapter5_only/` | Validation protocol, data panels, metric dictionary, and acceptance rule. |
+| 6 | `results/results_chapter6_only/` | Scenario-family construction, baseline family, and comparison design. |
+| 7 | `results/results_chapter7_only/` | Formal ablation and failure diagnostics for naive PINNs, coordinate transforms, hard barrier ansatz, and BAAC. |
+| 8 | `results/results_chapter8_only/` | Accuracy, Greek diagnostics, boundary consistency, residual diagnostics, scorecard, and trained surrogate models. |
+| 9 | `results/results_chapter9_only/` | Runtime measurements, break-even analysis, throughput comparison, and repeated-query use cases. |
+| 10 | `results/results_chapter10_only/` | Solver-selection decision map, research roadmap, and summary of established versus non-established claims. |
 
+## Quickstart
 
+Clone the repository:
 
-results/results\_chapter5\_only/
+```powershell
+git clone https://github.com/uiclxh/structurally-constrained-pinns-barrier-options.git
+cd structurally-constrained-pinns-barrier-options
+```
 
-&#x20; Validation protocol, train/validation/test/stress panels, metric dictionary, and acceptance rule.
+Create and activate a Python environment:
 
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
 
+Run a lightweight subset of the workflow:
 
-results/results\_chapter6\_only/
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/reproduce_all.ps1 -SkipHeavy
+```
 
-&#x20; Scenario family construction, baseline family, and comparison design.
+Run the full scripted workflow:
 
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/reproduce_all.ps1
+```
 
+The full workflow can take substantial time because Chapter 7 and Chapter 8 include neural training and evaluation. The curated outputs already included in `results/`, `figures/`, `tables/`, and `models/` are the primary reproducibility package.
 
-results/results\_chapter7\_only/
+## Suggested Reading Order
 
-&#x20; Ablation and failure diagnostics for naive PINNs, coordinate transforms, hard barrier ansatz, and BAAC.
+1. Read the final PDF in `paper/`.
+2. Review the validation scorecard in `results/results_chapter8_only/table14_validation_scorecard.csv`.
+3. Inspect the runtime break-even table in `results/results_chapter9_only/table15_runtime_inputs_break_even_summary.csv`.
+4. Check the decision map and roadmap in `results/results_chapter10_only/`.
+5. Use `src/README.md` if you want to trace which script generated each chapter-level output.
 
+## Licensing
 
+This repository uses mixed licensing because it contains code, manuscript material, generated research outputs, and trained model artifacts.
 
-results/results\_chapter8\_only/
+- Code, scripts, and repository documentation are licensed under the MIT License. See [LICENSE](LICENSE).
+- Paper, figures, tables, results, and model weights have separate terms. See [LICENSE-CONTENT.md](LICENSE-CONTENT.md).
 
-&#x20; Accuracy, Greek diagnostics, boundary consistency, residual diagnostics, validation scorecard, and trained surrogate models.
+The models and numerical outputs are research artifacts. They are not production trading systems and should not be used for live pricing, risk management, or investment decisions without independent validation.
 
+## Citation
 
-
-results/results\_chapter9\_only/
-
-&#x20; Runtime measurements, break-even analysis, throughput comparison, and repeated-query use cases.
-
-
-
-results/results\_chapter10\_only/
-
-&#x20; Solver-selection decision map, research roadmap, and summary of established versus non-established claims.
-
-
-
+If you use this repository, please cite the working paper and repository. GitHub can read the citation metadata from [CITATION.cff](CITATION.cff).
