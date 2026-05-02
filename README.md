@@ -1,4 +1,4 @@
-\# Structurally Constrained PINNs for Barrier Option Pricing
+# Structurally Constrained PINNs for Barrier Option Pricing
 
 
 
@@ -6,7 +6,7 @@ This repository accompanies the working paper:
 
 
 
-\*\*Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Differences\*\*
+**Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Differences\*\*
 
 
 
@@ -14,7 +14,7 @@ The project studies whether physics-informed neural surrogates can be made credi
 
 
 
-\## Project Overview
+## Project Overview
 
 
 
@@ -26,37 +26,37 @@ This project compares a strong implicit finite-difference benchmark with structu
 
 
 
-\## Research Questions
+## Research Questions
 
 
 
-1\. Why do naive PINNs fail in near-barrier high-curvature regimes?
+1. Why do naive PINNs fail in near-barrier high-curvature regimes?
 
-2\. Which structural constraints and sampling mechanisms stabilize neural surrogates for barrier PDEs?
+2. Which structural constraints and sampling mechanisms stabilize neural surrogates for barrier PDEs?
 
-3\. How should prices, Greeks, boundary consistency, and residual diagnostics be jointly validated?
+3. How should prices, Greeks, boundary consistency, and residual diagnostics be jointly validated?
 
-4\. When does offline-online amortization make neural surrogates economically attractive relative to a strong finite-difference benchmark?
-
-
-
-\## Main Contributions
+4. When does offline-online amortization make neural surrogates economically attractive relative to a strong finite-difference benchmark?
 
 
 
-\- A high-precision implicit finite-difference benchmark using log-domain transformation, exact barrier alignment, Rannacher-smoothed Crank-Nicolson stepping, and sparse linear solves.
-
-\- A barrier-aware neural surrogate framework with hard structural enforcement of the absorbing boundary.
-
-\- A validation protocol that jointly evaluates price error, Delta, Gamma, barrier residuals, positivity, and PDE residual diagnostics.
-
-\- Ablation evidence showing that transformed coordinates, hard barrier constraints, and barrier-aware sampling materially improve learned behavior.
-
-\- A deployment-economics analysis comparing one-off solves with repeated-query workloads.
+## Main Contributions
 
 
 
-\## Repository Structure
+- A high-precision implicit finite-difference benchmark using log-domain transformation, exact barrier alignment, Rannacher-smoothed Crank-Nicolson stepping, and sparse linear solves.
+
+- A barrier-aware neural surrogate framework with hard structural enforcement of the absorbing boundary.
+
+- A validation protocol that jointly evaluates price error, Delta, Gamma, barrier residuals, positivity, and PDE residual diagnostics.
+
+- Ablation evidence showing that transformed coordinates, hard barrier constraints, and barrier-aware sampling materially improve learned behavior.
+
+- A deployment-economics analysis comparing one-off solves with repeated-query workloads.
+
+
+
+## Repository Structure
 
 
 
