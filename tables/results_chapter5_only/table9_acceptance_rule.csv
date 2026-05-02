@@ -1,0 +1,8 @@
+Criterion,Threshold,Pass-fail meaning
+Validation price q95 relative error,<= 2.00%,Pass if upper-tail pricing error is acceptable on held-out validation points.
+Near-barrier Gamma q95 absolute error,<= 0.150,Pass if local curvature remains stable in the most fragile region.
+Barrier residual max,<= 1.0e-05,Pass if the hard barrier is respected up to numerical tolerance.
+Validation PDE residual q95,<= 1.00e-02,Pass if operator consistency is acceptable out of sample.
+Positivity violation rate,<= 0.000,Pass if no economically inadmissible negative values appear.
+Any criterion fails,Refine or restart,"Reject checkpoint; revise architecture, sampling, or optimization and retrain."
+All criteria pass,Accept,Promote checkpoint to deployable surrogate candidate and proceed to test / stress reporting.

@@ -1,0 +1,7 @@
+{
+  "name": "Supervised surrogate",
+  "differential": false,
+  "best_val_loss": 0.11157763004302979,
+  "chosen_stage": 1,
+  "warmstart_used": false
+}

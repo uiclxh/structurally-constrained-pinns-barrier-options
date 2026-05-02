@@ -1,0 +1,19 @@
+Component,Setting,Role
+Input state,"$[y,\tau,\sigma,\beta,r,q]$",Parametric transformed coordinate input
+Hidden layers,4,Depth of the smooth neural core
+Width,128,Neurons per hidden layer
+Activation,SiLU,Smooth activation for stable derivative propagation
+Initialization,Xavier uniform,Weight initialization of linear layers
+Output map,Softplus,Positive amplitude map inside the structural ansatz
+Barrier ansatz,"$\hat V=\psi_{\mathrm{bar}}(x;\mu)\,\mathrm{Softplus}(A_\theta)$",Hard enforcement of the absorbing boundary
+Barrier factor sharpness,14.0,Controls how fast the barrier factor activates
+Adam schedule,3000 epochs @ lr=0.001,Warm-up training stage
+Adam decay,0.995,Exponential learning-rate decay
+L-BFGS refinement,250 steps @ lr=1.0,Second-stage refinement
+Interior collocation,4000,Broad PDE enforcement
+Near-barrier quota,2000,Localized barrier-layer resolution
+Near-strike quota,1000,Payoff kink neighborhood coverage
+Terminal samples,1500,Terminal condition enforcement
+Far-field samples,1000,Asymptotic boundary consistency
+Residual refinement quota,1500,BAAC residual-triggered refinement
+Resampling frequency,every 10 epochs,Dynamic refresh of collocation

@@ -1,0 +1,8 @@
+Term,Mathematical form,Status,Purpose
+Absorbing boundary loss,$\text{none}$,Not used,The barrier is enforced structurally by the ansatz rather than by a soft penalty.
+PDE residual,$\mathcal{L}_{\mathrm{PDE}}=\mathbb{E}\!\left[|u_\tau-\frac12\sigma^2u_{yy}-(r-q-\frac12\sigma^2)u_y+ru|^2\right]$,Always on,Enforces the transformed Black--Scholes PDE in the interior domain.
+Terminal residual,"$\mathcal{L}_{\mathrm{term}}=\mathbb{E}[|\hat u(y,0)-(\mathrm{e}^y-1)_+|^2]$",Always on,Matches the payoff at maturity.
+Far-field consistency,"$\mathcal{L}_{\mathrm{far}}=\mathbb{E}[|\hat u(y_{\max},\tau)-(\mathrm{e}^y\mathrm{e}^{-q\tau}-\mathrm{e}^{-r\tau})|^2]$",Always on,Stabilizes the upper boundary truncation.
+Monotonicity regularizer,$\mathcal{L}_{\mathrm{mono}}=\mathbb{E}[\mathrm{ReLU}(-u_y)^2]$,Optional,Discourages violations of price monotonicity with respect to the underlying.
+Gamma smoothness regularizer,$\mathcal{L}_{\Gamma}=\mathbb{E}[|u_{yy}|^2]$,Optional,"Controls excessive curvature noise in difficult regions, especially near the barrier."
+Total objective,$\mathcal{L}=w_{\mathrm{PDE}}\mathcal{L}_{\mathrm{PDE}}+w_{\mathrm{term}}\mathcal{L}_{\mathrm{term}}+w_{\mathrm{far}}\mathcal{L}_{\mathrm{far}}+w_{\mathrm{mono}}\mathcal{L}_{\mathrm{mono}}+w_{\Gamma}\mathcal{L}_{\Gamma}$,Always on,Combines structural fitting and optional regularization under fixed weights.

@@ -1,0 +1,13 @@
+\begin{table}
+\caption{Runtime inputs and break-even summary.}
+\label{tab:runtime_break_even_summary_ch9}
+\begin{tabular}{lrrrrrl}
+\toprule
+Method & Train time (s) & Label generation time (s) & Inference latency (s) & Batch throughput (contracts/s) & Break-even N* & Validation status \\
+\midrule
+FDM & 0.000000 & 0.000000 & 0.003451 & NaN & 0.000000 & Benchmark \\
+PINN & 191.928175 & 0.000000 & 0.000153 & 1893292.739382 & 58195.146440 & Pass gamma + barrier \\
+Supervised surrogate & 120.000000 & 0.430251 & 0.000175 & 1376967.176036 & 36765.242587 & Pass barrier only \\
+\bottomrule
+\end{tabular}
+\end{table}

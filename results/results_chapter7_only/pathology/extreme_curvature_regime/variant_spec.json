@@ -1,0 +1,11 @@
+{
+  "name": "Naive PINN pathology",
+  "group": "Failure baseline",
+  "coordinate_mode": "raw_s",
+  "ansatz_mode": "soft_bc",
+  "sampling_mode": "uniform",
+  "optimizer_mode": "adam_only",
+  "use_monotonicity": false,
+  "use_gamma_smooth": false,
+  "barrier_kappa": 14.0
+}

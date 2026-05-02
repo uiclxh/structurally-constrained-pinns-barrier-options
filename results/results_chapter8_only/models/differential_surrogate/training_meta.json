@@ -1,0 +1,7 @@
+{
+  "name": "Differential surrogate",
+  "differential": true,
+  "best_val_loss": 0.19289708137512207,
+  "chosen_stage": 2,
+  "warmstart_used": true
+}

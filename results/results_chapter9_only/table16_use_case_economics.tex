@@ -1,0 +1,16 @@
+\begin{table}
+\caption{Use-case economics table.}
+\label{tab:use_case_economics_ch9}
+\begin{tabular}{lrll}
+\toprule
+Task & Required evaluations & Preferred solver & Reason \\
+\midrule
+Single contract pricing & 1 & FDM & Highest local precision is preferred and amortization is negligible. \\
+Near-barrier validation audit & 50 & FDM & Highest local precision is preferred and amortization is negligible. \\
+Intraday scenario grid & 60000 & Supervised surrogate & Large repeated-query workloads can amortize label generation and training. \\
+Large risk surface generation & 10000 & FDM & Current workload is too small to amortize training or label-generation costs. \\
+Portfolio Delta/Gamma array & 10000 & FDM & Greek-sensitive low-volume tasks still favor the benchmark solver. \\
+Calibration inner loop & 48000 & Supervised surrogate & Large repeated-query workloads can amortize label generation and training. \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,6 @@
+Model,Labels needed,Structural constraints,Greek quality expectation,Deployment role
+High-precision implicit FDM,No,"Exact PDE discretization, aligned barrier, implicit stability",Strong local benchmark,Single-query benchmark institution
+Fixed-parameter PINN,No,PDE residual; often weak unless barrier-aware structure is added,Moderate and regime-sensitive,One-network-per-instance neural PDE solver
+Parametric PINN surrogate,No,PDE-informed with shared parametric representation,Potentially stronger if validated regionally,One-network-many-contracts physics-informed surrogate
+Supervised surrogate,Yes,Depends on architecture; not automatic,"Good in price, variable in Greeks unless designed explicitly",Fast batch pricing when labels are available
+Differential surrogate,Yes (price + Greek labels),"Derivative-aware supervision, but not inherently PDE-consistent",Typically strongest among label-based neural baselines,Fast deployment when Greek quality matters

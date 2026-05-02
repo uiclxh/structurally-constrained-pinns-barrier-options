@@ -1,0 +1,11 @@
+{
+  "name": "Hard barrier only",
+  "group": "Ansatz",
+  "coordinate_mode": "xy",
+  "ansatz_mode": "hard_barrier",
+  "sampling_mode": "full_baac",
+  "optimizer_mode": "hybrid",
+  "use_monotonicity": false,
+  "use_gamma_smooth": false,
+  "barrier_kappa": 14.0
+}

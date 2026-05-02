@@ -1,0 +1,14 @@
+\begin{table}
+\caption{Validation scorecard under the Chapter 5 protocol.}
+\label{tab:validation_scorecard}
+\begin{tabular}{lrlrlrlrlrll}
+\toprule
+Model & Price q95 (%) & Pass price & Near-barrier Gamma q95 & Pass gamma & Barrier residual max & Pass barrier & Residual q95 & Pass residual & Positivity violation rate & Pass positivity & Overall \\
+\midrule
+FDM & 0.017924 & PASS & 0.000723 & PASS & 0.000000 & PASS & 0.509095 & FAIL & 0.000000 & PASS & FAIL \\
+Supervised & 18.977771 & FAIL & 0.747259 & FAIL & 0.000006 & PASS & 132.133696 & FAIL & 0.000000 & PASS & FAIL \\
+Differential & 18.604733 & FAIL & 0.738783 & FAIL & 0.000006 & PASS & 133.814411 & FAIL & 0.000000 & PASS & FAIL \\
+PINN & 21.322392 & FAIL & 0.106243 & PASS & 0.000009 & PASS & 9.957489 & FAIL & 0.000000 & PASS & FAIL \\
+\bottomrule
+\end{tabular}
+\end{table}

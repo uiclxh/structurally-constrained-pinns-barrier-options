@@ -1,0 +1,21 @@
+\begin{table}
+\caption{Ablation summary matrix based on real Chapter 7 experiments.}
+\label{tab:ablation_summary_matrix_real}
+\begin{tabular}{llrrrrrrrrr}
+\toprule
+Variant & Group & Median RE (%) & 95th RE (%) & Worst-case RE (%) & Delta error & Gamma error & Barrier residual & Positivity violation & Success rate & Training time (s) \\
+\midrule
+Naive PINN & Failure baseline & 63.336715 & 203.318902 & 1332.372054 & 0.307815 & 0.584768 & 3.836184 & 0.050000 & 0.000000 & 27.100304 \\
+Raw S-space & Coordinate choice & 100.000000 & 100.000000 & 100.000000 & 1.208667 & 0.018162 & 0.000000 & 0.000000 & 0.000000 & 252.188703 \\
+x = S/K & Coordinate choice & 4.415119 & 6.163334 & 38.504008 & 0.050318 & 0.016754 & 0.000009 & 0.000000 & 0.000000 & 175.029139 \\
+y = ln(S/K) & Coordinate choice & 3.728492 & 4.820952 & 39.275103 & 0.062062 & 0.015151 & 0.000010 & 0.000000 & 0.000000 & 173.790220 \\
+Soft BC & Ansatz & 80.395710 & 104.696051 & 1300.463841 & 1.177509 & 0.024922 & 6.356441 & 0.262500 & 0.000000 & 36.028695 \\
+Hard barrier only & Ansatz & 4.924643 & 6.469663 & 25.053146 & 0.056116 & 0.015109 & 0.000010 & 0.000000 & 0.000000 & 155.088513 \\
+Hard barrier + positivity & Ansatz & 5.945972 & 7.467594 & 43.730271 & 0.037840 & 0.014428 & 0.000010 & 0.000000 & 0.000000 & 174.944088 \\
+No refinement & BAAC & 10.549007 & 21.084660 & 77.272223 & 0.070860 & 0.033457 & 0.000012 & 0.000000 & 0.000000 & 30.240551 \\
+Static oversampling & BAAC & 5.359725 & 8.155783 & 26.075284 & 0.069973 & 0.018418 & 0.000009 & 0.000000 & 0.000000 & 94.582136 \\
+Residual refinement & BAAC & 4.306744 & 5.144905 & 38.684622 & 0.047839 & 0.015924 & 0.000009 & 0.000000 & 0.000000 & 148.537825 \\
+Full BAAC & BAAC & 3.645083 & 4.911741 & 41.397337 & 0.043134 & 0.014098 & 0.000010 & 0.000000 & 0.000000 & 191.928175 \\
+\bottomrule
+\end{tabular}
+\end{table}

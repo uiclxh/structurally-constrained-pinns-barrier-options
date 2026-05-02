@@ -1,0 +1,11 @@
+{
+  "name": "x = S/K",
+  "group": "Coordinate choice",
+  "coordinate_mode": "x",
+  "ansatz_mode": "hard_barrier_positivity",
+  "sampling_mode": "full_baac",
+  "optimizer_mode": "hybrid",
+  "use_monotonicity": true,
+  "use_gamma_smooth": true,
+  "barrier_kappa": 14.0
+}

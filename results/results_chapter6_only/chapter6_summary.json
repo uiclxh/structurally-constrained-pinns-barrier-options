@@ -1,0 +1,124 @@
+{
+  "status": "chapter6 experimental design assets generated",
+  "scenario_families": [
+    {
+      "family": "Core scenarios",
+      "sigma_range": [
+        0.18,
+        0.35
+      ],
+      "rho_d_range": [
+        0.03,
+        0.18
+      ],
+      "maturity_range": [
+        0.5,
+        1.5
+      ],
+      "n_contracts": 260,
+      "purpose": "Main operating regime used for structured training and core comparison."
+    },
+    {
+      "family": "Near-barrier stress",
+      "sigma_range": [
+        0.15,
+        0.35
+      ],
+      "rho_d_range": [
+        0.002,
+        0.03
+      ],
+      "maturity_range": [
+        0.3,
+        1.5
+      ],
+      "n_contracts": 80,
+      "purpose": "Tests whether local pricing and Gamma remain stable in immediate knockout proximity."
+    },
+    {
+      "family": "Short-maturity / low-vol stress",
+      "sigma_range": [
+        0.12,
+        0.2
+      ],
+      "rho_d_range": [
+        0.01,
+        0.1
+      ],
+      "maturity_range": [
+        0.05,
+        0.35
+      ],
+      "n_contracts": 70,
+      "purpose": "Targets steep local geometry caused by short time horizons and low volatility."
+    },
+    {
+      "family": "Wide random panel",
+      "sigma_range": [
+        0.12,
+        0.4
+      ],
+      "rho_d_range": [
+        0.002,
+        0.2
+      ],
+      "maturity_range": [
+        0.05,
+        2.0
+      ],
+      "n_contracts": 210,
+      "purpose": "Broad held-out coverage for post-acceptance generalization and deployment reporting."
+    }
+  ],
+  "baselines": [
+    {
+      "model": "High-precision implicit FDM",
+      "labels_needed": "No",
+      "structural_constraints": "Exact PDE discretization, aligned barrier, implicit stability",
+      "greek_quality_expectation": "Strong local benchmark",
+      "deployment_role": "Single-query benchmark institution",
+      "local_precision_score": 9.7,
+      "many_query_efficiency_score": 2.8
+    },
+    {
+      "model": "Fixed-parameter PINN",
+      "labels_needed": "No",
+      "structural_constraints": "PDE residual; often weak unless barrier-aware structure is added",
+      "greek_quality_expectation": "Moderate and regime-sensitive",
+      "deployment_role": "One-network-per-instance neural PDE solver",
+      "local_precision_score": 5.2,
+      "many_query_efficiency_score": 5.3
+    },
+    {
+      "model": "Parametric PINN surrogate",
+      "labels_needed": "No",
+      "structural_constraints": "PDE-informed with shared parametric representation",
+      "greek_quality_expectation": "Potentially stronger if validated regionally",
+      "deployment_role": "One-network-many-contracts physics-informed surrogate",
+      "local_precision_score": 6.3,
+      "many_query_efficiency_score": 7.6
+    },
+    {
+      "model": "Supervised surrogate",
+      "labels_needed": "Yes",
+      "structural_constraints": "Depends on architecture; not automatic",
+      "greek_quality_expectation": "Good in price, variable in Greeks unless designed explicitly",
+      "deployment_role": "Fast batch pricing when labels are available",
+      "local_precision_score": 7.0,
+      "many_query_efficiency_score": 9.1
+    },
+    {
+      "model": "Differential surrogate",
+      "labels_needed": "Yes (price + Greek labels)",
+      "structural_constraints": "Derivative-aware supervision, but not inherently PDE-consistent",
+      "greek_quality_expectation": "Typically strongest among label-based neural baselines",
+      "deployment_role": "Fast deployment when Greek quality matters",
+      "local_precision_score": 8.0,
+      "many_query_efficiency_score": 8.4
+    }
+  ],
+  "table10_csv": "E:\\results_chapter6_only\\table10_scenario_families.csv",
+  "table11_csv": "E:\\results_chapter6_only\\table11_baseline_family.csv",
+  "figure15": "E:\\results_chapter6_only\\figure15_scenario_matrix.png",
+  "figure16": "E:\\results_chapter6_only\\figure16_comparison_design_map.png"
+}

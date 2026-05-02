@@ -1,0 +1,4 @@
+Method,Train time (s),Label generation time (s),Inference latency (s),Batch throughput (contracts/s),Break-even N*,Validation status
+FDM,0.0,0.0,0.003451029999905586,,0.0,Benchmark
+PINN,191.92817490000016,0.0,0.00015302000010706252,1893292.7393817361,58195.14644034588,Pass gamma + barrier
+Supervised surrogate,120.0,0.43025069999930565,0.00017537500007165364,1376967.1760362417,36765.24258693447,Pass barrier only

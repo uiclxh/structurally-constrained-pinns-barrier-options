@@ -1,0 +1,5 @@
+Family,Sigma range,Rho_d range,T range,Number of contracts,Purpose
+Core scenarios,"[0.180, 0.350]","[0.030, 0.180]","[0.50, 1.50]",260,Main operating regime used for structured training and core comparison.
+Near-barrier stress,"[0.150, 0.350]","[0.002, 0.030]","[0.30, 1.50]",80,Tests whether local pricing and Gamma remain stable in immediate knockout proximity.
+Short-maturity / low-vol stress,"[0.120, 0.200]","[0.010, 0.100]","[0.05, 0.35]",70,Targets steep local geometry caused by short time horizons and low volatility.
+Wide random panel,"[0.120, 0.400]","[0.002, 0.200]","[0.05, 2.00]",210,Broad held-out coverage for post-acceptance generalization and deployment reporting.

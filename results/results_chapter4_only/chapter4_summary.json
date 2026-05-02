@@ -1,0 +1,8 @@
+{
+  "status": "workflow scaffold completed",
+  "device": "cpu",
+  "dry_run_seconds": 4.127405599996564,
+  "artifact_dir": "E:\\results_chapter4_only\\artifact",
+  "table6_csv": "E:\\results_chapter4_only\\table6_architecture_hyperparameters.csv",
+  "table7_csv": "E:\\results_chapter4_only\\table7_loss_terms.csv"
+}

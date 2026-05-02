@@ -1,0 +1,37 @@
+{
+  "status": "chapter10 discussion and roadmap assets prepared",
+  "config": {
+    "output_dir": "results_chapter10_only",
+    "chapter8_scorecard_csv": "E:\\results_chapter8_only\\table14_validation_scorecard.csv",
+    "chapter9_runtime_table_csv": "E:\\results_chapter9_only\\table15_runtime_inputs_break_even_summary.csv",
+    "query_volume_ticks": [
+      1,
+      10,
+      100,
+      1000,
+      10000,
+      100000
+    ],
+    "precision_ticks": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "precision_labels": [
+      "Low\nprecision need",
+      "Moderate",
+      "High",
+      "Audit-grade /\nGreek-sensitive"
+    ]
+  },
+  "inputs": {
+    "chapter8_scorecard_csv": "E:\\results_chapter8_only\\table14_validation_scorecard.csv",
+    "chapter9_runtime_table_csv": "E:\\results_chapter9_only\\table15_runtime_inputs_break_even_summary.csv"
+  },
+  "outputs": {
+    "figure32": "E:\\results_chapter10_only\\figure32_decision_map_when_to_use_which_solver.png",
+    "figure33": "E:\\results_chapter10_only\\figure33_research_roadmap.png",
+    "table17": "E:\\results_chapter10_only\\table17_establishes_vs_not_establishes.csv"
+  }
+}

@@ -1,0 +1,16 @@
+Category,Metric,Statistic,Region,Acceptance threshold
+Pricing,Pointwise price relative error,mean / median / q95 / q99,Global test set,Report only
+Pricing,Pointwise price relative error,q95,Validation set,<= 2.00%
+Pricing,Worst-case price error,max,Near-barrier stress band,Report only
+Greeks,Delta absolute error,median / q95,Validation + stress,Report only
+Greeks,Gamma absolute error,q95,Near-barrier band,<= 0.150
+Greeks,Gamma absolute error,max,Stress set,Report only
+Admissibility,Positivity violation rate,fraction,Validation + test,<= 0.000
+Admissibility,Monotonicity violation rate,fraction,Validation + test,Report only
+Boundary,"$|V(B_d,t)|$",max / q95,Barrier line,max <= 1.0e-05
+Boundary,Terminal payoff mismatch,q95,$\tau=0$,Report only
+Residual,PDE residual norm,q95,Validation interior,<= 1.00e-02
+Residual,Regional residual map,heatmap,Near-barrier / strike / smooth / far-field,Visual diagnostic
+Runtime,Training time,wall-clock,Offline,Report only
+Runtime,Inference latency,per evaluation,Online,Report only
+Runtime,Break-even workload,$N^\*$,Deployment analysis,Report only

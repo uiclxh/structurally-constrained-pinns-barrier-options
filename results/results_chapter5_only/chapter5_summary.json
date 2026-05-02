@@ -1,0 +1,15 @@
+{
+  "status": "chapter5 validation protocol assets generated",
+  "table8_csv": "E:\\results_chapter5_only\\table8_validation_metrics_dictionary.csv",
+  "table9_csv": "E:\\results_chapter5_only\\table9_acceptance_rule.csv",
+  "figure13": "E:\\results_chapter5_only\\figure13_data_split_and_scenario_family_map.png",
+  "figure14": "E:\\results_chapter5_only\\figure14_regional_validation_zones.png",
+  "scenario_summary_csv": "E:\\results_chapter5_only\\scenario_panel_summary.csv",
+  "acceptance_defaults": {
+    "max_price_q95_pct": 2.0,
+    "max_gamma_q95_abs": 0.15,
+    "max_barrier_abs": 1e-05,
+    "max_residual_q95": 0.01,
+    "max_positivity_violation_rate": 0.0
+  }
+}

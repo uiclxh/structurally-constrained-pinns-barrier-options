@@ -1,0 +1,15 @@
+\begin{table}
+\caption{FDM convergence and benchmark verification across the six core scenarios. Price errors are computed on the scenario evaluation panel, while Delta and Gamma errors are computed at $S_0$ and aggregated across scenarios. The table is used to justify the benchmark configuration adopted in the main experiments.}
+\label{tab:fdm_convergence}
+\begin{tabular}{rrrrrrrr}
+\toprule
+Nx & Nt & Max Abs Error & Median Relative Error (%) & 95th Relative Error (%) & Delta AE & Gamma AE & Runtime per Contract (s) \\
+\midrule
+200 & 500 & 0.015460 & 0.008058 & 0.119420 & 0.000131 & 0.000402 & 0.006239 \\
+400 & 1000 & 0.015360 & 0.003433 & 0.036988 & 0.000065 & 0.000158 & 0.013126 \\
+800 & 2000 & 0.015338 & 0.001059 & 0.020614 & 0.000060 & 0.000078 & 0.036504 \\
+1200 & 3000 & 0.015335 & 0.000658 & 0.017898 & 0.000028 & 0.000053 & 0.064049 \\
+1600 & 4000 & 0.015333 & 0.000233 & 0.013854 & 0.000013 & 0.000041 & 0.100236 \\
+\bottomrule
+\end{tabular}
+\end{table}

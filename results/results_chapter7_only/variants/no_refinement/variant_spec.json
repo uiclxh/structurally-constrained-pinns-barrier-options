@@ -1,0 +1,11 @@
+{
+  "name": "No refinement",
+  "group": "BAAC",
+  "coordinate_mode": "xy",
+  "ansatz_mode": "hard_barrier_positivity",
+  "sampling_mode": "uniform",
+  "optimizer_mode": "hybrid",
+  "use_monotonicity": true,
+  "use_gamma_smooth": true,
+  "barrier_kappa": 14.0
+}
