@@ -90,15 +90,15 @@ From the Chapter 9 runtime analysis:
 
 The project integrates:
 
-- Final manuscript PDF from `D:\桌面\Structurally Constrained PINNs for Barrier Option Pricing.pdf`.
-- Chapter 3 results from `E:\results_chapter3_only`.
-- Chapter 4 results from `E:\results_chapter4_only`.
-- Chapter 5 results from `E:\results_chapter5_only`.
-- Chapter 6 results from `E:\results_chapter6_only`.
-- Chapter 7 results from `E:\results_chapter7_only`.
-- Chapter 8 results from `E:\results_chapter8_only`.
-- Chapter 9 results from `E:\results_chapter9_only`.
-- Chapter 10 results from `E:\results_chapter10_only`.
+- Final manuscript PDF from `Structurally Constrained PINNs for Barrier Option Pricing.pdf`.
+- Chapter 3 results from `results_chapter3_only`.
+- Chapter 4 results from `results_chapter4_only`.
+- Chapter 5 results from `results_chapter5_only`.
+- Chapter 6 results from `results_chapter6_only`.
+- Chapter 7 results from `results_chapter7_only`.
+- Chapter 8 results from `results_chapter8_only`.
+- Chapter 9 results from `results_chapter9_only`.
+- Chapter 10 results from `results_chapter10_only`.
 
 ## Suggested GitHub Tagline
 

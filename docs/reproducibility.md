@@ -25,15 +25,15 @@ The repository includes:
 The repository integrates the following local materials:
 
 ```text
-D:\桌面\Structurally Constrained PINNs for Barrier Option Pricing.pdf
-E:\results_chapter3_only
-E:\results_chapter4_only
-E:\results_chapter5_only
-E:\results_chapter6_only
-E:\results_chapter7_only
-E:\results_chapter8_only
-E:\results_chapter9_only
-E:\results_chapter10_only
+Structurally Constrained PINNs for Barrier Option Pricing.pdf
+results_chapter3_only
+results_chapter4_only
+results_chapter5_only
+results_chapter6_only
+results_chapter7_only
+results_chapter8_only
+results_chapter9_only
+results_chapter10_only
 ```
 
 ## Chapter-Level Reproducibility Map

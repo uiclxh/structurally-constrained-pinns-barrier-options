@@ -49,15 +49,15 @@ This repository provides the reproducibility package for the SSRN working paper,
 
 The working paper and reproducibility package are built from the following local materials:
 
-- Final manuscript: `D:\桌面\Structurally Constrained PINNs for Barrier Option Pricing.pdf`
-- Chapter 3 results: `E:\results_chapter3_only`
-- Chapter 4 results: `E:\results_chapter4_only`
-- Chapter 5 results: `E:\results_chapter5_only`
-- Chapter 6 results: `E:\results_chapter6_only`
-- Chapter 7 results: `E:\results_chapter7_only`
-- Chapter 8 results: `E:\results_chapter8_only`
-- Chapter 9 results: `E:\results_chapter9_only`
-- Chapter 10 results: `E:\results_chapter10_only`
+- Final manuscript: `Structurally Constrained PINNs for Barrier Option Pricing.pdf`
+- Chapter 3 results: `results_chapter3_only`
+- Chapter 4 results: `results_chapter4_only`
+- Chapter 5 results: `results_chapter5_only`
+- Chapter 6 results: `results_chapter6_only`
+- Chapter 7 results: `results_chapter7_only`
+- Chapter 8 results: `results_chapter8_only`
+- Chapter 9 results: `results_chapter9_only`
+- Chapter 10 results: `results_chapter10_only`
 
 ## AI Disclosure Template
 
