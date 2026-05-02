@@ -121,6 +121,18 @@ powershell -ExecutionPolicy Bypass -File scripts/reproduce_all.ps1
 
 The full workflow can take substantial time because Chapter 7 and Chapter 8 include neural training and evaluation. The curated outputs already included in `results/`, `figures/`, `tables/`, and `models/` are the primary reproducibility package.
 
+## Reproduction Boundary
+
+`scripts/reproduce_all.ps1` is a convenience runner for chapter-level scripts. It is useful for rerunning selected workflows and checking how the generated artifacts are organized.
+
+It should not be read as a clean-room rebuild guarantee. The curated release already includes the reported figures, tables, trained artifacts, and result summaries. If you rerun scripts, inspect the regenerated chapter output folders before replacing the curated files under `results/`, `figures/`, `tables/`, or `models/`.
+
+Use `-SkipHeavy` for a faster pass that skips the neural-training and runtime-heavy chapters:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/reproduce_all.ps1 -SkipHeavy
+```
+
 ## Suggested Reading Order
 
 1. Read the final PDF in `paper/`.

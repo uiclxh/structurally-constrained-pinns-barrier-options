@@ -14,6 +14,7 @@ The scripts are organized by manuscript chapter. They are research scripts rathe
 | `chapter4_barrier_surrogate_framework.py` | Chapter 4 | Defines the barrier-aware neural surrogate framework, architecture tables, loss terms, and initial artifact. | `results_chapter4_only/` |
 | `chapter5_validation_protocol_framework.py` | Chapter 5 | Generates validation panels, stress panels, validation metrics, and acceptance-rule assets. | `results_chapter5_only/` |
 | `chapter6_experimental_design_framework.py` | Chapter 6 | Generates scenario-family tables, baseline-family tables, and comparison-design figures. | `results_chapter6_only/` |
+| `chapter7_ablation_failure_diagnostics_framework.py` | Chapter 7 helper | Legacy plotting/helper module used by the formal Chapter 7 script. | Helper only |
 | `chapter7_ablation_failure_diagnostics_real.py` | Chapter 7 | Runs the formal ablation and failure-diagnostics workflow used for the final Chapter 7 evidence package. | `results_chapter7_real_formal/` |
 | `chapter8_results_accuracy_real.py` | Chapter 8 | Evaluates pricing accuracy, Greeks, boundary consistency, residual diagnostics, and validation scorecards. | `results_chapter8_only/` |
 | `chapter9_results_runtime_real.py` | Chapter 9 | Measures runtime, throughput, break-even behavior, and repeated-query deployment economics. | `results_chapter9_only/` |
@@ -57,7 +58,7 @@ The full workflow can take substantial time, especially Chapter 7 and Chapter 8.
 
 ## Known Script-Level Caveat
 
-The repository is primarily a curated reproducibility package. The Chapter 7 formal script references a small legacy plotting/helper module used during development. The curated Chapter 7 outputs and trained artifacts are already included under `results/results_chapter7_only/`, and these are the recommended source for inspecting the final reported evidence.
+The repository is primarily a curated reproducibility package. The Chapter 7 formal script uses `chapter7_ablation_failure_diagnostics_framework.py` as a legacy helper for the failure-taxonomy figure. The curated Chapter 7 outputs and trained artifacts are already included under `results/results_chapter7_only/`, and these are the recommended source for inspecting the final reported evidence.
 
 ## Output Policy
 
