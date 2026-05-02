@@ -3,9 +3,12 @@ message: "If you use this repository, please cite the accompanying working paper
 title: "Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Differences"
 type: software
 authors:
-  - family-names: "YOUR_FAMILY_NAME"
-    given-names: "YOUR_GIVEN_NAME"
-    affiliation: "YOUR_INSTITUTION"
+  - family-names: "Lin"
+    given-names: "Tom"
+    affiliation: "Beijing Normal-Hong Kong Baptist University (BNBU)"
+  - family-names: "Lin"
+    given-names: "Marvin"
+    affiliation: "Beijing Normal-Hong Kong Baptist University (BNBU)"
 abstract: "This repository accompanies a working paper on structurally constrained physics-informed neural networks for barrier option pricing. The project compares barrier-aware neural surrogates against a high-precision implicit finite-difference benchmark and reports generated figures, tables, validation scorecards, trained model artifacts, residual diagnostics, and runtime-economics outputs."
 keywords:
   - "barrier option pricing"
@@ -19,15 +22,15 @@ keywords:
 license: "MIT"
 version: "1.0.0"
 date-released: "2026-05-02"
-repository-code: "https://github.com/YOUR_USERNAME/structurally-constrained-pinns-barrier-options"
-url: "https://github.com/YOUR_USERNAME/structurally-constrained-pinns-barrier-options"
+repository-code: "https://github.com/uiclxh/structurally-constrained-pinns-barrier-options"
+url: "https://github.com/uiclxh/structurally-constrained-pinns-barrier-options"
 preferred-citation:
   type: article
   title: "Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Differences"
   authors:
-    - family-names: "YOUR_FAMILY_NAME"
-      given-names: "YOUR_GIVEN_NAME"
-      affiliation: "YOUR_INSTITUTION"
+    - family-names: "Lin"
+      given-names: "Tom"
+      affiliation: "Beijing Normal-Hong Kong Baptist University (BNBU)"
   year: 2026
   abstract: "This paper studies structurally constrained physics-informed neural networks for continuously monitored down-and-out European call option pricing under the Black-Scholes framework. It benchmarks barrier-aware neural surrogates against a high-precision implicit finite-difference method and evaluates pricing accuracy, Greek stability, boundary consistency, residual diagnostics, and repeated-query deployment economics."
   keywords:
@@ -37,4 +40,4 @@ preferred-citation:
     - "finite differences"
     - "Greeks"
   status: "working-paper"
-  url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=YOUR_SSRN_ABSTRACT_ID"
+  url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6628159"
