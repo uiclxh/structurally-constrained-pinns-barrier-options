@@ -6,7 +6,7 @@ This repository accompanies the working paper:
 
 
 
-**Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Differences\*\*
+**Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Difference**
 
 
 
