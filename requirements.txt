@@ -1,5 +1,7 @@
-numpy>=1.24
-pandas>=2.0
-matplotlib>=3.7
-scipy>=1.10
-torch>=2.0
+# Tested target: Python 3.11, CPU-only execution.
+# For an exact environment, use requirements-lock.txt or environment.yml.
+numpy==1.26.4
+pandas==2.2.2
+matplotlib==3.8.4
+scipy==1.13.1
+torch==2.3.1

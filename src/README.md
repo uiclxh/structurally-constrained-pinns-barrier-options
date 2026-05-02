@@ -39,6 +39,8 @@ From the repository root, install dependencies:
 python -m pip install -r requirements.txt
 ```
 
+The target environment is Python 3.11 with CPU-only PyTorch. For stricter reproducibility, use `requirements-lock.txt` or `environment.yml` from the repository root.
+
 Then run an individual chapter script:
 
 ```powershell
@@ -52,6 +54,10 @@ powershell -ExecutionPolicy Bypass -File scripts/reproduce_all.ps1
 ```
 
 The full workflow can take substantial time, especially Chapter 7 and Chapter 8. It is intended for research reproduction rather than quick smoke testing.
+
+## Known Script-Level Caveat
+
+The repository is primarily a curated reproducibility package. The Chapter 7 formal script references a small legacy plotting/helper module used during development. The curated Chapter 7 outputs and trained artifacts are already included under `results/results_chapter7_only/`, and these are the recommended source for inspecting the final reported evidence.
 
 ## Output Policy
 

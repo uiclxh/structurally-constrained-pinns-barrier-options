@@ -83,7 +83,7 @@ git clone https://github.com/uiclxh/structurally-constrained-pinns-barrier-optio
 cd structurally-constrained-pinns-barrier-options
 ```
 
-Create and activate a Python environment:
+Create and activate a Python environment. The target environment is Python 3.11 with CPU-only PyTorch:
 
 ```powershell
 python -m venv .venv
@@ -91,6 +91,21 @@ python -m venv .venv
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
+
+For a stricter pip environment, use:
+
+```powershell
+python -m pip install -r requirements-lock.txt
+```
+
+For Conda or Mamba, use:
+
+```powershell
+conda env create -f environment.yml
+conda activate barrier-pinn-repro
+```
+
+The runtime results in Chapter 9 are hardware-dependent. The reported package is CPU-oriented; GPU runs may change latency, throughput, and break-even thresholds.
 
 Run a lightweight subset of the workflow:
 
