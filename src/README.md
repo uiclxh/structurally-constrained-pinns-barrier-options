@@ -14,7 +14,7 @@ The scripts are organized by manuscript chapter. They are research scripts rathe
 | `chapter4_barrier_surrogate_framework.py` | Chapter 4 | Defines the barrier-aware neural surrogate framework, architecture tables, loss terms, and initial artifact. | `results_chapter4_only/` |
 | `chapter5_validation_protocol_framework.py` | Chapter 5 | Generates validation panels, stress panels, validation metrics, and acceptance-rule assets. | `results_chapter5_only/` |
 | `chapter6_experimental_design_framework.py` | Chapter 6 | Generates scenario-family tables, baseline-family tables, and comparison-design figures. | `results_chapter6_only/` |
-| `chapter7_ablation_failure_diagnostics_real.py` | Chapter 7 | Runs the formal ablation and failure-diagnostics workflow used for the final Chapter 7 evidence package. | `results_chapter7_real_formal/` |
+| `chapter7_ablation_failure_diagnostics_real.py` | Chapter 7 | Runs the formal ablation and failure-diagnostics workflow used for the final Chapter 7 evidence package. | `results_chapter7_only/` |
 | `chapter8_results_accuracy_real.py` | Chapter 8 | Evaluates pricing accuracy, Greeks, boundary consistency, residual diagnostics, and validation scorecards. | `results_chapter8_only/` |
 | `chapter9_results_runtime_real.py` | Chapter 9 | Measures runtime, throughput, break-even behavior, and repeated-query deployment economics. | `results_chapter9_only/` |
 | `chapter10_discussion_roadmap_framework.py` | Chapter 10 | Generates the solver-selection decision map, roadmap figure, and establishes-versus-not-establishes table. | `results_chapter10_only/` |
@@ -26,7 +26,7 @@ The current `src/` folder reflects the scripts available in this repository snap
 The Chapter 8 and Chapter 9 scripts depend on trained artifacts and result folders from earlier chapters. In particular, Chapter 8 expects the formal Chapter 7 barrier-aware PINN artifact produced under:
 
 ```text
-results_chapter7_real_formal/full_baac_guard_probe/
+results_chapter7_only/full_baac_guard_probe/
 ```
 
 The repository stores generated chapter outputs separately under `results/`, `figures/`, `tables/`, and `models/`. These outputs are the primary reproducibility evidence package.
@@ -62,7 +62,7 @@ results_chapter3_only/
 results_chapter4_only/
 results_chapter5_only/
 results_chapter6_only/
-results_chapter7_real_formal/
+results_chapter7_only/
 results_chapter8_only/
 results_chapter9_only/
 results_chapter10_only/
