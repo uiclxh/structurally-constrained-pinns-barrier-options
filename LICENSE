@@ -19,10 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-Scope: this MIT License applies to source code, scripts, and repository
-documentation, including files under src/, scripts/, docs/, and root-level
-repository documentation files, unless a file states otherwise.
-
-The paper, figures, tables, generated result files, and trained model weights are
-not licensed under MIT. Their terms are specified in LICENSE-CONTENT.md.

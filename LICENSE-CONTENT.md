@@ -1,12 +1,12 @@
 # Content and Artifact License Terms
 
-This repository contains several kinds of material. The root `LICENSE` file applies to source code, scripts, and repository documentation. The terms below apply to the accompanying paper, generated outputs, figures, tables, and trained model artifacts.
+This repository contains several kinds of material. The root `LICENSE` file is the standard MIT License and applies to source code, scripts, and repository documentation. This file applies to the accompanying paper, generated outputs, figures, tables, and trained model artifacts.
 
 This file is intended to remove ambiguity about reuse. It is not legal advice.
 
 ## Scope
 
-These terms apply to:
+These content terms apply to:
 
 - `paper/`
 - `figures/`
@@ -14,41 +14,27 @@ These terms apply to:
 - `results/`
 - `models/`
 
-## Paper
+## Paper, Figures, Tables, and Generated Results
 
-Files under `paper/` are provided as a working paper for academic reading, citation, and evaluation.
+Files under `paper/`, `figures/`, `tables/`, and `results/` are licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0), unless a specific file states otherwise.
 
-Permitted uses:
-
-- Read, download, and cite the paper for academic or educational purposes.
-- Share a link to this repository or to the SSRN working paper page once available.
-- Quote short excerpts with proper attribution, subject to ordinary academic citation norms.
-
-Not permitted without written permission from the author(s):
-
-- Redistributing modified versions of the paper.
-- Selling the paper or bundling it into a commercial product.
-- Presenting the paper, in whole or in substantial part, as your own work.
-
-## Figures, Tables, and Generated Results
-
-Files under `figures/`, `tables/`, and `results/` are made available for non-commercial academic inspection, citation, and reproducibility review.
+License text: https://creativecommons.org/licenses/by-nc/4.0/
 
 Permitted uses:
 
-- Use the files to verify, inspect, or reproduce the claims of the working paper.
-- Include small excerpts, selected tables, or selected figures in academic commentary, review, or teaching material with proper attribution.
+- Read, download, cite, and share these materials for academic or educational purposes.
+- Reuse figures, tables, and generated results in non-commercial academic work with proper attribution.
 - Build non-commercial academic extensions of the analysis with citation to this repository and the working paper.
 
 Not permitted without written permission from the author(s):
 
-- Commercial redistribution.
-- Creating a modified public dataset that implies endorsement by the original author(s).
-- Using the outputs as certified production pricing data or trading/risk-management infrastructure.
+- Commercial redistribution or sale.
+- Presenting the materials, in whole or in substantial part, as your own work.
+- Using generated outputs as certified production pricing data or trading/risk-management infrastructure.
 
 ## Trained Model Artifacts
 
-Files under `models/` and model files under `results/` are research artifacts.
+Files under `models/` and model files under `results/` are research artifacts. They are provided for non-commercial academic use only.
 
 Permitted uses:
 

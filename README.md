@@ -166,10 +166,11 @@ powershell -ExecutionPolicy Bypass -File scripts/reproduce_all.ps1 -SkipHeavy
 
 ## Licensing
 
-This repository uses mixed licensing because it contains code, manuscript material, generated research outputs, and trained model artifacts.
+This repository uses split licensing because it contains code, manuscript material, generated research outputs, and trained model artifacts.
 
 - Code, scripts, and repository documentation are licensed under the MIT License. See [LICENSE](LICENSE).
-- Paper, figures, tables, results, and model weights have separate terms. See [LICENSE-CONTENT.md](LICENSE-CONTENT.md).
+- Paper, figures, tables, and generated result files are released for non-commercial academic use under CC BY-NC 4.0. See [LICENSE-CONTENT.md](LICENSE-CONTENT.md).
+- Trained model weights are research artifacts with non-commercial academic-use terms. See [LICENSE-CONTENT.md](LICENSE-CONTENT.md).
 
 The models and numerical outputs are research artifacts. They are not production trading systems and should not be used for live pricing, risk management, or investment decisions without independent validation.
 
