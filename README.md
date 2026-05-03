@@ -4,7 +4,7 @@ This repository is the reproducibility package for the working paper:
 
 **Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Differences**
 
-SSRN working paper: forthcoming. Current SSRN positioning notes are in [docs/ssrn.md](docs/ssrn.md); replace this line with the assigned SSRN URL after upload.
+SSRN working paper: <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6628159>
 
 GitHub repository: <https://github.com/uiclxh/structurally-constrained-pinns-barrier-options>
 
