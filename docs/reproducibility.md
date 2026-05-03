@@ -20,6 +20,68 @@ The repository includes:
 - Trained model artifacts where available.
 - Validation scorecards, residual diagnostics, runtime tables, and deployment-economics outputs.
 
+## Environment
+
+The target environment for this release is:
+
+```text
+Python 3.11
+CPU-only PyTorch execution
+Windows / PowerShell-oriented helper scripts
+```
+
+Primary dependency files:
+
+- `requirements.txt`: concise pinned dependency list.
+- `requirements-lock.txt`: stricter pip-oriented lock-style list for the core dependency tree.
+- `environment.yml`: Conda/Mamba environment specification.
+
+The core Python dependencies are:
+
+```text
+numpy==1.26.4
+pandas==2.2.2
+matplotlib==3.8.4
+scipy==1.13.1
+torch==2.3.1
+```
+
+The project was organized as a CPU-oriented reproducibility package. GPU execution is possible in principle, but runtime, throughput, and break-even values in Chapter 9 should be remeasured if the hardware changes.
+
+Install with pip:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+Install with a stricter dependency list:
+
+```powershell
+python -m pip install -r requirements-lock.txt
+```
+
+Install with Conda:
+
+```powershell
+conda env create -f environment.yml
+conda activate barrier-pinn-repro
+```
+
+If `torch==2.3.1` cannot be resolved from the default pip index for your platform, install the CPU wheel from the official PyTorch CPU index:
+
+```powershell
+python -m pip install torch==2.3.1 --index-url https://download.pytorch.org/whl/cpu
+```
+
+## Hardware and Runtime Caveat
+
+The runtime and deployment-economics outputs are not hardware-invariant constants. Chapter 9 measures latency, throughput, and break-even behavior for the active runtime host used in the reported workflow. A different CPU, GPU, batch size, BLAS backend, PyTorch build, or memory hierarchy can change the absolute timing values.
+
+For this reason, Chapter 9 should be read as evidence of the amortization structure rather than a universal latency benchmark.
+
 ## Source Material
 
 The repository integrates the following local materials:
