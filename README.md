@@ -4,7 +4,7 @@ This repository is the reproducibility package for the working paper:
 
 **Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Differences**
 
-SSRN working paper: forthcoming. Replace this line with the assigned SSRN URL after upload.
+SSRN working paper: forthcoming. Current SSRN positioning notes are in [docs/ssrn.md](docs/ssrn.md); replace this line with the assigned SSRN URL after upload.
 
 GitHub repository: <https://github.com/uiclxh/structurally-constrained-pinns-barrier-options>
 
@@ -32,6 +32,29 @@ For details, see [docs/reproducibility.md](docs/reproducibility.md).
 - The barrier-aware PINN is the strongest learned model in near-barrier Gamma control and boundary consistency.
 - No learned surrogate passes the full validation protocol in the current workflow.
 - Learned surrogates become economically relevant only under sufficiently large repeated-query workloads and acceptable task-specific error tolerance.
+
+## Main Result Snapshot
+
+The table below condenses the validation scorecard. Lower values are better for price q95, near-barrier Gamma q95, barrier residual, and residual q95.
+
+| Model | Price q95 (%) | Near-barrier Gamma q95 | Barrier residual max | Residual q95 | Validation status |
+| --- | ---: | ---: | ---: | ---: | --- |
+| FDM benchmark | **0.018** | **0.0007** | **4.84e-14** | 0.509 | Strongest local-precision reference |
+| Barrier-aware PINN | 21.322 | **0.106** | **8.67e-06** | 9.957 | Strongest learned model for Gamma and barrier consistency |
+| Supervised surrogate | 18.978 | 0.747 | **6.44e-06** | 132.134 | Fast inference, weak near-barrier Gamma |
+| Differential surrogate | 18.605 | 0.739 | **6.44e-06** | 133.814 | Delta-aware baseline, still weak near the barrier |
+
+![Gamma comparison heatmaps and representative slice](figures/results_chapter8_only/figure25_gamma_heatmaps_and_slices.png)
+
+Runtime economics are conditional on workload size and validation status:
+
+| Method | Inference latency (s) | Batch throughput (contracts/s) | Break-even N* | Validation status |
+| --- | ---: | ---: | ---: | --- |
+| FDM | 0.003451 | - | 0 | Benchmark |
+| PINN | 0.000153 | 1,893,293 | 58,195 | Pass gamma + barrier |
+| Supervised surrogate | 0.000175 | 1,376,967 | 36,765 | Pass barrier only |
+
+Full tables are available in `results/results_chapter8_only/table14_validation_scorecard.csv` and `results/results_chapter9_only/table15_runtime_inputs_break_even_summary.csv`.
 
 ## Repository Structure
 
