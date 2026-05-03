@@ -1,0 +1,84 @@
+name: Smoke test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    name: Python 3.11 reproducibility smoke test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Show Python version
+        run: python --version
+
+      - name: Install lightweight CPU dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy==1.26.4 pandas==2.2.2 matplotlib==3.8.4 scipy==1.13.1
+          python -m pip install torch==2.3.1+cpu --index-url https://download.pytorch.org/whl/cpu
+
+      - name: Import core libraries
+        run: |
+          python - <<'PY'
+          import numpy
+          import pandas
+          import scipy
+          import torch
+
+          print("numpy", numpy.__version__)
+          print("pandas", pandas.__version__)
+          print("scipy", scipy.__version__)
+          print("torch", torch.__version__)
+          print("torch.cuda.is_available", torch.cuda.is_available())
+          PY
+
+      - name: Check curated research assets
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          required_paths = [
+              "README.md",
+              "LICENSE",
+              "LICENSE-CONTENT.md",
+              "CITATION.cff",
+              "paper/Structurally_Constrained_PINNs_for_Barrier_Option_Pricing.pdf",
+              "results/results_chapter3_only/fdm_convergence.csv",
+              "results/results_chapter8_only/table13_main_pricing_comparison.csv",
+              "results/results_chapter8_only/table14_validation_scorecard.csv",
+              "figures/results_chapter8_only/figure25_gamma_heatmaps_and_slices.png",
+              "tables/results_chapter8_only/table14_validation_scorecard.csv",
+          ]
+
+          missing = []
+          empty = []
+          for item in required_paths:
+              path = Path(item)
+              if not path.exists():
+                  missing.append(item)
+              elif path.is_file() and path.stat().st_size == 0:
+                  empty.append(item)
+
+          if missing or empty:
+              raise SystemExit(f"Missing files: {missing}; empty files: {empty}")
+
+          print(f"Validated {len(required_paths)} curated research assets.")
+          PY
+
+      - name: Compile source files
+        run: python -m compileall -q src

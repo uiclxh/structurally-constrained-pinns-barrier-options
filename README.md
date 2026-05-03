@@ -1,5 +1,7 @@
 # Structurally Constrained PINNs for Barrier Option Pricing
 
+[![Smoke test](https://github.com/uiclxh/structurally-constrained-pinns-barrier-options/actions/workflows/smoke.yml/badge.svg)](https://github.com/uiclxh/structurally-constrained-pinns-barrier-options/actions/workflows/smoke.yml)
+
 This repository is the reproducibility package for the working paper:
 
 **Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Differences**
