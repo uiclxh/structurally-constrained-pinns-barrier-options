@@ -39,7 +39,7 @@ Avoid wording such as:
 
 ## Repository Linkage
 
-The SSRN page should link to the GitHub repository as a reproducibility package. The GitHub repository should link back to the SSRN page once the SSRN paper URL is available.
+The SSRN page: [SSRN Paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6628159)
 
 Suggested repository wording:
 
