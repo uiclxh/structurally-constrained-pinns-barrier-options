@@ -2,7 +2,7 @@
 
 ## Title
 
-Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Differences
+Structurally Constrained PINNs for Barrier Option Pricing under a High-precision Implicit Finite-difference Benchmark
 
 ## Short Description
 
@@ -106,7 +106,7 @@ Reproducible computational finance research on structurally constrained PINNs fo
 
 ## Suggested CV Entry
 
-Working Paper and Research Project: Structurally Constrained PINNs for Barrier Option Pricing. Developed a reproducible computational finance project comparing high-precision implicit finite differences with barrier-aware physics-informed neural surrogates, including Greek diagnostics, validation scorecards, residual analysis, and deployment-economics evaluation.
+Working Paper and Research Project: Structurally Constrained PINNs for Barrier Option Pricing under a High-precision Implicit Finite-difference Benchmark. Developed a reproducible computational finance project comparing high-precision implicit finite differences with barrier-aware physics-informed neural surrogates, including Greek diagnostics, validation scorecards, residual analysis, and deployment-economics evaluation. Available at SSRN: https://ssrn.com/abstract=6628159. DOI: https://doi.org/10.2139/ssrn.6628159.
 
 ## Suggested SOP Wording
 

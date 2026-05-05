@@ -54,7 +54,7 @@ If you use this repository, cite the working paper and the repository. The repos
 
 Suggested short attribution:
 
-> Source: Structurally Constrained PINNs for Barrier Option Pricing, working paper and reproducibility package, 2026.
+> Source: Structurally Constrained PINNs for Barrier Option Pricing under a High-precision Implicit Finite-difference Benchmark, SSRN working paper and reproducibility package, 2026. DOI: https://doi.org/10.2139/ssrn.6628159.
 
 ## No Warranty
 

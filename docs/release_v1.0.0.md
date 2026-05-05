@@ -6,7 +6,7 @@ Release date: 2026-05-02
 
 `v1.0.0` is the first public research-asset release of the repository accompanying:
 
-**Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Differences**
+**Structurally Constrained PINNs for Barrier Option Pricing under a High-precision Implicit Finite-difference Benchmark**
 
 This release is intended as a curated reproducibility package for academic inspection, master's application review, and future research extension.
 

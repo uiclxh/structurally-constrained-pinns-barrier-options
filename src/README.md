@@ -2,7 +2,7 @@
 
 This folder contains the Python scripts used to generate or support the chapter-level outputs in the accompanying working paper:
 
-**Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Differences**
+**Structurally Constrained PINNs for Barrier Option Pricing under a High-precision Implicit Finite-difference Benchmark**
 
 The scripts are organized by manuscript chapter. They are research scripts rather than a packaged Python library.
 

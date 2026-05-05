@@ -4,9 +4,11 @@
 
 This repository is the reproducibility package for the working paper:
 
-**Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Differences**
+**Structurally Constrained PINNs for Barrier Option Pricing under a High-precision Implicit Finite-difference Benchmark**
 
-SSRN working paper: <https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6628159>
+SSRN working paper: <https://ssrn.com/abstract=6628159>
+
+DOI: <https://doi.org/10.2139/ssrn.6628159>
 
 GitHub repository: <https://github.com/uiclxh/structurally-constrained-pinns-barrier-options>
 
@@ -179,3 +181,7 @@ The models and numerical outputs are research artifacts. They are not production
 ## Citation
 
 If you use this repository, please cite the working paper and repository. GitHub can read the citation metadata from [CITATION.cff](CITATION.cff).
+
+Suggested paper citation:
+
+Lin, Tom. "Structurally Constrained PINNs for Barrier Option Pricing under a High-precision Implicit Finite-difference Benchmark." SSRN working paper, April 22, 2026. <https://doi.org/10.2139/ssrn.6628159>.

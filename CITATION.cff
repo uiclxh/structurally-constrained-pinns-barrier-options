@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite the accompanying working paper and reproducibility package."
-title: "Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Differences"
+title: "Structurally Constrained PINNs for Barrier Option Pricing under a High-precision Implicit Finite-difference Benchmark"
 type: software
 authors:
   - family-names: "Lin"
@@ -20,18 +20,20 @@ keywords:
   - "neural surrogates"
   - "validation protocol"
 license: "MIT"
-version: "1.0.0"
-date-released: "2026-05-02"
+version: "1.0.1"
+date-released: "2026-05-05"
 repository-code: "https://github.com/uiclxh/structurally-constrained-pinns-barrier-options"
-url: "https://github.com/uiclxh/structurally-constrained-pinns-barrier-options"
+url: "https://ssrn.com/abstract=6628159"
 preferred-citation:
   type: article
-  title: "Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Differences"
+  title: "Structurally Constrained PINNs for Barrier Option Pricing under a High-precision Implicit Finite-difference Benchmark"
   authors:
     - family-names: "Lin"
       given-names: "Tom"
       affiliation: "Beijing Normal-Hong Kong Baptist University (BNBU)"
   year: 2026
+  date-published: "2026-05-04"
+  doi: "10.2139/ssrn.6628159"
   abstract: "This paper studies structurally constrained physics-informed neural networks for continuously monitored down-and-out European call option pricing under the Black-Scholes framework. It benchmarks barrier-aware neural surrogates against a high-precision implicit finite-difference method and evaluates pricing accuracy, Greek stability, boundary consistency, residual diagnostics, and repeated-query deployment economics."
   keywords:
     - "barrier option pricing"
@@ -40,4 +42,4 @@ preferred-citation:
     - "finite differences"
     - "Greeks"
   status: "working-paper"
-  url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6628159"
+  url: "https://ssrn.com/abstract=6628159"

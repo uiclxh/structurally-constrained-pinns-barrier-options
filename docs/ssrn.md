@@ -1,28 +1,37 @@
-# SSRN Working Paper Notes
+# SSRN Working Paper
 
-This document summarizes the intended SSRN positioning for the project:
+This document records the SSRN listing and citation information for the working paper:
 
-**Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Differences**
+**Structurally Constrained PINNs for Barrier Option Pricing under a High-precision Implicit Finite-difference Benchmark**
 
-The SSRN upload should be presented as a working paper or preprint, not as a peer-reviewed publication.
+The paper is publicly available as an SSRN working paper. SSRN availability should be described as a preprint or working paper, not as peer-reviewed journal publication.
 
-## Recommended SSRN Title
+## Public Links
 
-Structurally Constrained PINNs for Barrier Option Pricing: Benchmarking Against High-Precision Implicit Finite Differences
+- SSRN page: <https://ssrn.com/abstract=6628159>
+- DOI: <https://doi.org/10.2139/ssrn.6628159>
 
-## Recommended SSRN Abstract
+## SSRN Metadata
 
-This paper studies structurally constrained physics-informed neural networks for continuously monitored down-and-out European call option pricing under the Black-Scholes framework. Barrier options provide a demanding test case for neural PDE solvers because the absorbing boundary creates localized high-curvature behavior near the knockout region, where pricing accuracy alone may fail to reveal instability in Greeks and boundary consistency. The study constructs a high-precision implicit finite-difference benchmark using log-domain transformation, exact barrier alignment, Rannacher-smoothed Crank-Nicolson time stepping, and sparse linear solves. Against this benchmark, it evaluates a barrier-aware neural surrogate framework combining transformed coordinates, hard barrier enforcement, barrier-aware adaptive collocation, hybrid optimization, and protocol-based validation. The empirical analysis jointly examines price errors, Delta and Gamma behavior, boundary residuals, positivity, PDE residual diagnostics, and repeated-query deployment economics. The results show that the finite-difference method remains the strongest local-precision benchmark, while the barrier-aware PINN is the strongest learned model in near-barrier Gamma control and boundary consistency. Supervised surrogates become economically attractive only under sufficiently large repeated-query workloads and conditional error tolerance. The paper positions barrier-option surrogate selection as a structured decision problem in which accuracy determines admissibility and amortization determines economic preference.
+- Author: Tom Lin
+- Affiliation: Beijing Normal-Hong Kong Baptist University (BNBU)
+- Date written: April 22, 2026
+- Posted: May 4, 2026
+- Length: 19 pages
 
-## Recommended Keywords
+## SSRN Abstract
 
-barrier option pricing; physics-informed neural networks; computational finance; finite differences; Greeks; PDE-constrained learning; neural surrogates; validation protocol
+Continuously monitored barrier options are a local-precision stress test rather than a generic smooth pricing task. The absorbing barrier creates a narrow region in which both the option value and local sensitivities vary sharply. We study down-and-out European calls in a one-dimensional Black-Scholes setting and evaluate neural surrogates against a deliberately strong classical benchmark. The benchmark uses a transformed logdomain formulation, exact barrier alignment, and Rannacher-smoothed Crank-Nicolson time stepping. The proposed neural framework combines transformed coordinates, a barrier-preserving hard-constrained ansatz, barrier-aware adaptive collocation, and hybrid optimization. Evaluation is protocol-based: prices, Delta, Gamma, barrier consistency, positivity, residual diagnostics, and deployment economics are assessed jointly rather than through pricing error alone. The benchmark FDM remains strongest for absolute local accuracy and Greek-sensitive tasks. Among learned models, the barrier-aware PINN is strongest in near-barrier Gamma control and boundary consistency, while supervised surrogates become economically attractive only under sufficiently large repeated-query workloads and conditional error tolerance. The main conclusion is therefore not neural replacement, but structured solver selection in which accuracy determines admissibility and amortization determines economic preference.
 
-## Suggested JEL Codes
+## Keywords
 
-G13; C63; C45
+Barrier Option Pricing; Physics-informed Neural Networks; Implicit Finite Differences; Validation Protocol; Deployment Economics
 
-## Recommended SSRN Status Wording
+## Suggested Citation
+
+Lin, Tom. "Structurally Constrained PINNs for Barrier Option Pricing under a High-precision Implicit Finite-difference Benchmark." April 22, 2026. Available at SSRN: https://ssrn.com/abstract=6628159 or http://dx.doi.org/10.2139/ssrn.6628159.
+
+## Recommended Status Wording
 
 Use one of the following phrases in applications and public profiles:
 
@@ -38,8 +47,6 @@ Avoid wording such as:
 - Peer-reviewed SSRN paper.
 
 ## Repository Linkage
-
-The SSRN page: [SSRN Paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6628159)
 
 Suggested repository wording:
 
