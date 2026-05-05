@@ -52,12 +52,18 @@ jobs:
           python - <<'PY'
           from pathlib import Path
 
+          paper_pdfs = sorted(Path("paper").glob("*.pdf"))
+          if not paper_pdfs:
+              raise SystemExit("Missing paper PDF: expected at least one non-empty PDF under paper/")
+          empty_pdfs = [str(path) for path in paper_pdfs if path.stat().st_size == 0]
+          if empty_pdfs:
+              raise SystemExit(f"Empty paper PDF files: {empty_pdfs}")
+
           required_paths = [
               "README.md",
               "LICENSE",
               "LICENSE-CONTENT.md",
               "CITATION.cff",
-              "paper/Structurally_Constrained_PINNs_for_Barrier_Option_Pricing.pdf",
               "results/results_chapter3_only/fdm_convergence.csv",
               "results/results_chapter8_only/table13_main_pricing_comparison.csv",
               "results/results_chapter8_only/table14_validation_scorecard.csv",
@@ -77,7 +83,7 @@ jobs:
           if missing or empty:
               raise SystemExit(f"Missing files: {missing}; empty files: {empty}")
 
-          print(f"Validated {len(required_paths)} curated research assets.")
+          print(f"Validated {len(required_paths)} curated research assets and {len(paper_pdfs)} paper PDF(s).")
           PY
 
       - name: Compile source files
