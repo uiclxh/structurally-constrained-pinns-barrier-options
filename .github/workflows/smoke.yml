@@ -62,7 +62,7 @@ jobs:
           required_paths = [
               "README.md",
               "LICENSE",
-              "LICENSE-CONTENT.md",
+              "docs/content-license.md",
               "CITATION.cff",
               "results/results_chapter3_only/fdm_convergence.csv",
               "results/results_chapter8_only/table13_main_pricing_comparison.csv",

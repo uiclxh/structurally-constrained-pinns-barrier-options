@@ -8,17 +8,17 @@ The scripts are organized by manuscript chapter. They are research scripts rathe
 
 ## Files
 
-| File | Chapter | Purpose | Primary Output Folder |
+| Script | Chapter | Main role | Output |
 | --- | --- | --- | --- |
-| `chapter3_fdm_benchmark_only.py` | Chapter 3 | Builds the high-precision implicit finite-difference benchmark and convergence table. | `results_chapter3_only/` |
-| `chapter4_barrier_surrogate_framework.py` | Chapter 4 | Defines the barrier-aware neural surrogate framework, architecture tables, loss terms, and initial artifacts. | `results_chapter4_only/` |
-| `chapter5_validation_protocol_framework.py` | Chapter 5 | Generates validation panels, stress panels, validation metrics, and acceptance-rule assets. | `results_chapter5_only/` |
-| `chapter6_experimental_design_framework.py` | Chapter 6 | Generates scenario-family tables, baseline-family tables, and comparison-design figures. | `results_chapter6_only/` |
-| `chapter7_ablation_failure_diagnostics_framework.py` | Chapter 7 helper | Provides legacy plotting and helper utilities used by the formal Chapter 7 script. | Helper only |
-| `chapter7_ablation_failure_diagnostics_real.py` | Chapter 7 | Runs the formal ablation and failure-diagnostics workflow used for the final Chapter 7 evidence package. | `results_chapter7_only/` |
-| `chapter8_results_accuracy_real.py` | Chapter 8 | Evaluates pricing accuracy, Greeks, boundary consistency, residual diagnostics, and validation scorecards. | `results_chapter8_only/` |
-| `chapter9_results_runtime_real.py` | Chapter 9 | Measures runtime, throughput, break-even behavior, and repeated-query deployment economics. | `results_chapter9_only/` |
-| `chapter10_discussion_roadmap_framework.py` | Chapter 10 | Generates the solver-selection decision map, roadmap figure, and establishes-versus-not-establishes table. | `results_chapter10_only/` |
+| `chapter3_fdm_benchmark_only.py` | 3 | FDM benchmark and convergence table | `results_chapter3_only/` |
+| `chapter4_barrier_surrogate_framework.py` | 4 | Surrogate framework, architecture, and loss assets | `results_chapter4_only/` |
+| `chapter5_validation_protocol_framework.py` | 5 | Validation panels, stress panels, and metric assets | `results_chapter5_only/` |
+| `chapter6_experimental_design_framework.py` | 6 | Scenario families and comparison design | `results_chapter6_only/` |
+| `chapter7_ablation_failure_diagnostics_framework.py` | 7 helper | Legacy plotting and helper utilities | Helper only |
+| `chapter7_ablation_failure_diagnostics_real.py` | 7 | Formal ablation and failure diagnostics | `results_chapter7_only/` |
+| `chapter8_results_accuracy_real.py` | 8 | Accuracy, Greeks, residuals, and scorecards | `results_chapter8_only/` |
+| `chapter9_results_runtime_real.py` | 9 | Runtime, throughput, and break-even analysis | `results_chapter9_only/` |
+| `chapter10_discussion_roadmap_framework.py` | 10 | Decision map, roadmap, and claim-status table | `results_chapter10_only/` |
 
 ## Important Notes
 

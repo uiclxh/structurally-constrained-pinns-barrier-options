@@ -1,6 +1,6 @@
 # Structurally Constrained PINNs for Barrier Option Pricing
 
-[![Smoke test](https://github.com/uiclxh/structurally-constrained-pinns-barrier-options/actions/workflows/smoke.yml/badge.svg)](https://github.com/uiclxh/structurally-constrained-pinns-barrier-options/actions/workflows/smoke.yml)
+[![Smoke test](https://github.com/uiclxh/structurally-constrained-pinns-barrier-options/actions/workflows/smoke.yml/badge.svg?branch=main)](https://github.com/uiclxh/structurally-constrained-pinns-barrier-options/actions/workflows/smoke.yml?query=branch%3Amain)
 
 This repository is the reproducibility package for the working paper:
 
@@ -37,24 +37,24 @@ For details, see [docs/reproducibility.md](docs/reproducibility.md).
 
 ## Main Result Snapshot
 
-The table below condenses the validation scorecard. Lower values are better for price q95, near-barrier Gamma q95, barrier residual, and residual q95.
+The table below condenses the validation scorecard. Lower values are better for all reported error and residual metrics.
 
-| Model | Price q95 (%) | Near-barrier Gamma q95 | Barrier residual max | Residual q95 | Validation status |
+| Model | Price q95 | Gamma q95 | Barrier max | Residual q95 | Takeaway |
 | --- | ---: | ---: | ---: | ---: | --- |
-| FDM benchmark | **0.018** | **0.0007** | **4.84e-14** | 0.509 | Strongest local-precision reference |
-| Barrier-aware PINN | 21.322 | **0.106** | **8.67e-06** | 9.957 | Strongest learned model for Gamma and barrier consistency |
-| Supervised surrogate | 18.978 | 0.747 | **6.44e-06** | 132.134 | Fast inference, weak near-barrier Gamma |
-| Differential surrogate | 18.605 | 0.739 | **6.44e-06** | 133.814 | Delta-aware baseline, still weak near the barrier |
+| FDM benchmark | **0.018%** | **0.0007** | **4.84e-14** | 0.509 | Best local-precision reference |
+| Barrier-aware PINN | 21.322% | **0.106** | **8.67e-06** | 9.957 | Best learned Gamma and barrier behavior |
+| Supervised surrogate | 18.978% | 0.747 | **6.44e-06** | 132.134 | Fast, but weak near-barrier Gamma |
+| Differential surrogate | 18.605% | 0.739 | **6.44e-06** | 133.814 | Delta-aware, still weak near barrier |
 
 ![Gamma comparison heatmaps and representative slice](figures/results_chapter8_only/figure25_gamma_heatmaps_and_slices.png)
 
 Runtime economics are conditional on workload size and validation status:
 
-| Method | Inference latency (s) | Batch throughput (contracts/s) | Break-even N* | Validation status |
+| Method | Latency (s) | Throughput | Break-even N* | Status |
 | --- | ---: | ---: | ---: | --- |
 | FDM | 0.003451 | - | 0 | Benchmark |
-| PINN | 0.000153 | 1,893,293 | 58,195 | Pass gamma + barrier |
-| Supervised surrogate | 0.000175 | 1,376,967 | 36,765 | Pass barrier only |
+| PINN | 0.000153 | 1,893,293/s | 58,195 | Pass Gamma + barrier |
+| Supervised surrogate | 0.000175 | 1,376,967/s | 36,765 | Pass barrier only |
 
 Full tables are available in `results/results_chapter8_only/table14_validation_scorecard.csv` and `results/results_chapter9_only/table15_runtime_inputs_break_even_summary.csv`.
 
@@ -88,16 +88,16 @@ models/
 
 ## Chapter Map
 
-| Chapter | Folder | Purpose |
+| Chapter | Evidence folder | What it contains |
 | --- | --- | --- |
-| 3 | `results/results_chapter3_only/` | High-precision implicit finite-difference benchmark and convergence verification. |
-| 4 | `results/results_chapter4_only/` | Barrier-aware neural surrogate framework, architecture tables, loss terms, and initial model artifact. |
-| 5 | `results/results_chapter5_only/` | Validation protocol, data panels, metric dictionary, and acceptance rule. |
-| 6 | `results/results_chapter6_only/` | Scenario-family construction, baseline family, and comparison design. |
-| 7 | `results/results_chapter7_only/` | Formal ablation and failure diagnostics for naive PINNs, coordinate transforms, hard barrier ansatz, and BAAC. |
-| 8 | `results/results_chapter8_only/` | Accuracy, Greek diagnostics, boundary consistency, residual diagnostics, scorecard, and trained surrogate models. |
-| 9 | `results/results_chapter9_only/` | Runtime measurements, break-even analysis, throughput comparison, and repeated-query use cases. |
-| 10 | `results/results_chapter10_only/` | Solver-selection decision map, research roadmap, and summary of established versus non-established claims. |
+| 3 | `results/results_chapter3_only/` | FDM benchmark and convergence checks |
+| 4 | `results/results_chapter4_only/` | Surrogate architecture, loss terms, and initial artifact |
+| 5 | `results/results_chapter5_only/` | Validation panels, metrics, and acceptance rule |
+| 6 | `results/results_chapter6_only/` | Scenario families and comparison design |
+| 7 | `results/results_chapter7_only/` | Ablation and failure diagnostics |
+| 8 | `results/results_chapter8_only/` | Accuracy, Greeks, residuals, scorecard, and models |
+| 9 | `results/results_chapter9_only/` | Runtime, throughput, and break-even analysis |
+| 10 | `results/results_chapter10_only/` | Solver-selection map and research roadmap |
 
 ## Quickstart
 
@@ -171,8 +171,8 @@ powershell -ExecutionPolicy Bypass -File scripts/reproduce_all.ps1 -SkipHeavy
 This repository uses split licensing because it contains code, manuscript material, generated research outputs, and trained model artifacts.
 
 - Code, scripts, and repository documentation are licensed under the MIT License. See [LICENSE](LICENSE).
-- Paper, figures, tables, and generated result files are released for non-commercial academic use under CC BY-NC 4.0. See [LICENSE-CONTENT.md](LICENSE-CONTENT.md).
-- Trained model weights are research artifacts with non-commercial academic-use terms. See [LICENSE-CONTENT.md](LICENSE-CONTENT.md).
+- Paper, figures, tables, and generated result files are released for non-commercial academic use under CC BY-NC 4.0. See [docs/content-license.md](docs/content-license.md).
+- Trained model weights are research artifacts with non-commercial academic-use terms. See [docs/content-license.md](docs/content-license.md).
 
 The models and numerical outputs are research artifacts. They are not production trading systems and should not be used for live pricing, risk management, or investment decisions without independent validation.
 
