@@ -34,7 +34,7 @@ class AblationVariant:
 @dataclass
 class Chapter7Config:
     seed: int = 42
-    output_dir: str = "results_chapter7_only"
+    output_dir: str = "results/results_chapter7_only"
     use_demo_data: bool = True
     variants: List[AblationVariant] = field(default_factory=list)
 
@@ -398,12 +398,12 @@ def export_summary(cfg: Chapter7Config, output_dir: Path) -> None:
         "status": "chapter7 ablation assets generated",
         "use_demo_data": cfg.use_demo_data,
         "num_variants": len(cfg.variants),
-        "figure17": str((output_dir / "figure17_failure_taxonomy.png").resolve()),
-        "figure18": str((output_dir / "figure18_training_pathology_naive_pinn.png").resolve()),
-        "figure19": str((output_dir / "figure19_effect_coordinate_choice.png").resolve()),
-        "figure20": str((output_dir / "figure20_effect_hard_constrained_ansatz.png").resolve()),
-        "figure21": str((output_dir / "figure21_effect_baac.png").resolve()),
-        "table12_csv": str((output_dir / "table12_ablation_summary_matrix.csv").resolve()),
+        "figure17": (output_dir / "figure17_failure_taxonomy.png").as_posix(),
+        "figure18": (output_dir / "figure18_training_pathology_naive_pinn.png").as_posix(),
+        "figure19": (output_dir / "figure19_effect_coordinate_choice.png").as_posix(),
+        "figure20": (output_dir / "figure20_effect_hard_constrained_ansatz.png").as_posix(),
+        "figure21": (output_dir / "figure21_effect_baac.png").as_posix(),
+        "table12_csv": (output_dir / "table12_ablation_summary_matrix.csv").as_posix(),
         "variants": [asdict(v) for v in cfg.variants],
     }
     with open(output_dir / "chapter7_summary.json", "w", encoding="utf-8") as f:
@@ -434,7 +434,7 @@ def main():
     print("  - Figure 20: effect of hard-constrained ansatz")
     print("  - Figure 21: effect of BAAC")
     print("  - Table 12: ablation summary matrix")
-    print(f"Output directory: {out.resolve()}")
+    print(f"Output directory: {out.as_posix()}")
 
 
 if __name__ == "__main__":

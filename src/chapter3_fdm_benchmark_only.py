@@ -400,7 +400,7 @@ def run_fdm_convergence(output_dir: Path) -> pd.DataFrame:
 # 4. Script entry
 # ============================================================
 def main():
-    output_dir = Path("results_chapter3_only")
+    output_dir = Path("results/results_chapter3_only")
     ensure_dir(output_dir)
 
     print("=" * 72)
@@ -409,9 +409,9 @@ def main():
 
     df = run_fdm_convergence(output_dir)
 
-    print("\n[Done] Chapter 3 benchmark table:\n")
+    print("\n[Done] Chapter 3 benchmark table:" "\n")
     print(df.to_string(index=False))
-    print(f"\nSaved to: {output_dir.resolve()}")
+    print(f"\nSaved to: {output_dir.as_posix()}")
 
 
 if __name__ == "__main__":

@@ -22,12 +22,12 @@ import chapter8_results_accuracy_real as ch8
 class Chapter9Config:
     seed: int = 42
     device: str = "cuda" if torch.cuda.is_available() else "cpu"
-    output_dir: str = "results_chapter9_only"
-    chapter8_output_dir: str = r"E:\results_chapter8_only"
-    chapter7_output_dir: str = r"E:\results_chapter7_real_formal"
-    pinn_model_path: str = r"E:\results_chapter7_real_formal\full_baac_guard_probe\best_model.pt"
-    pinn_variant_spec_path: str = r"E:\results_chapter7_real_formal\full_baac_guard_probe\variant_spec.json"
-    supervised_model_path: str = r"E:\results_chapter8_only\models\supervised_surrogate\best_model.pt"
+    output_dir: str = "results/results_chapter9_only"
+    chapter8_output_dir: str = "results/results_chapter8_only"
+    chapter7_output_dir: str = "results/results_chapter7_only"
+    pinn_model_path: str = "results/results_chapter7_only/full_baac_guard_probe/best_model.pt"
+    pinn_variant_spec_path: str = "results/results_chapter7_only/full_baac_guard_probe/variant_spec.json"
+    supervised_model_path: str = "results/results_chapter8_only/models/supervised_surrogate/best_model.pt"
     evaluation_counts: Tuple[int, ...] = (1, 10, 100, 1000, 5000, 10000, 20000, 50000, 100000)
     batch_sizes: Tuple[int, ...] = (1, 8, 32, 128, 512, 2048)
     throughput_repeats_small: int = 40
@@ -632,12 +632,12 @@ def main() -> None:
         "label_generation_time_s": label_generation_time,
         "supervised_training_time_s": supervised_training_time,
         "outputs": {
-            "table15": str((out / "table15_runtime_inputs_break_even_summary.csv").resolve()),
-            "figure28": str((out / "figure28_total_runtime_vs_evaluations.png").resolve()),
-            "figure29": str((out / "figure29_average_cost_per_evaluation.png").resolve()),
-            "figure30": str((out / "figure30_batch_throughput_comparison.png").resolve()),
-            "figure31": str((out / "figure31_use_case_barrier_risk_surface_generation.png").resolve()),
-            "table16": str((out / "table16_use_case_economics.csv").resolve()),
+            "table15": (out / "table15_runtime_inputs_break_even_summary.csv").as_posix(),
+            "figure28": (out / "figure28_total_runtime_vs_evaluations.png").as_posix(),
+            "figure29": (out / "figure29_average_cost_per_evaluation.png").as_posix(),
+            "figure30": (out / "figure30_batch_throughput_comparison.png").as_posix(),
+            "figure31": (out / "figure31_use_case_barrier_risk_surface_generation.png").as_posix(),
+            "table16": (out / "table16_use_case_economics.csv").as_posix(),
         },
     }
     with open(out / "chapter9_summary.json", "w", encoding="utf-8") as f:
@@ -653,7 +653,7 @@ def main() -> None:
     print("  - Figure 30: batch throughput comparison")
     print("  - Figure 31: use case barrier risk surface generation")
     print("  - Table 16: use-case economics table")
-    print(f"Output directory: {out.resolve()}")
+    print(f"Output directory: {out.as_posix()}")
 
 
 if __name__ == "__main__":

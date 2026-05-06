@@ -325,7 +325,7 @@ def export_scenario_data(panels: Dict[str, pd.DataFrame], output_dir: Path) -> N
 
 def main():
     cfg = ValidationProtocolConfig()
-    output_dir = Path("results_chapter5_only")
+    output_dir = Path("results/results_chapter5_only")
     ch4.ensure_dir(output_dir)
 
     panels = build_scenario_panels(cfg)
@@ -336,11 +336,11 @@ def main():
 
     summary = {
         "status": "chapter5 validation protocol assets generated",
-        "table8_csv": str((output_dir / "table8_validation_metrics_dictionary.csv").resolve()),
-        "table9_csv": str((output_dir / "table9_acceptance_rule.csv").resolve()),
-        "figure13": str((output_dir / "figure13_data_split_and_scenario_family_map.png").resolve()),
-        "figure14": str((output_dir / "figure14_regional_validation_zones.png").resolve()),
-        "scenario_summary_csv": str((output_dir / "scenario_panel_summary.csv").resolve()),
+        "table8_csv": (output_dir / "table8_validation_metrics_dictionary.csv").as_posix(),
+        "table9_csv": (output_dir / "table9_acceptance_rule.csv").as_posix(),
+        "figure13": (output_dir / "figure13_data_split_and_scenario_family_map.png").as_posix(),
+        "figure14": (output_dir / "figure14_regional_validation_zones.png").as_posix(),
+        "scenario_summary_csv": (output_dir / "scenario_panel_summary.csv").as_posix(),
         "acceptance_defaults": asdict(cfg.full.acceptance),
     }
     with open(output_dir / "chapter5_summary.json", "w", encoding="utf-8") as f:
@@ -354,7 +354,7 @@ def main():
     print("  - Figure 14: regional validation zones")
     print("  - Table 8: validation metrics dictionary")
     print("  - Table 9: acceptance rule")
-    print(f"Output directory: {output_dir.resolve()}")
+    print(f"Output directory: {output_dir.as_posix()}")
 
 
 if __name__ == "__main__":

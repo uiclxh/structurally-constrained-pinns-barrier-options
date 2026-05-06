@@ -684,7 +684,7 @@ def main():
     cfg = FullConfig()
     set_seed(cfg.seed)
 
-    base_dir = Path("results_chapter4_only")
+    base_dir = Path("results/results_chapter4_only")
     ensure_dir(base_dir)
 
     export_table6_and_table7(cfg, base_dir)
@@ -699,9 +699,9 @@ def main():
         "status": "workflow scaffold completed",
         "device": cfg.device,
         "dry_run_seconds": elapsed,
-        "artifact_dir": str((base_dir / "artifact").resolve()),
-        "table6_csv": str((base_dir / "table6_architecture_hyperparameters.csv").resolve()),
-        "table7_csv": str((base_dir / "table7_loss_terms.csv").resolve()),
+        "artifact_dir": (base_dir / "artifact").as_posix(),
+        "table6_csv": (base_dir / "table6_architecture_hyperparameters.csv").as_posix(),
+        "table7_csv": (base_dir / "table7_loss_terms.csv").as_posix(),
     }
     with open(base_dir / "chapter4_summary.json", "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2)
@@ -713,7 +713,7 @@ def main():
     print("  - Table 6 (architecture + hyperparameters)")
     print("  - Table 7 (loss terms + roles)")
     print("  - Dry-run training artifact")
-    print(f"Output directory: {base_dir.resolve()}")
+    print(f"Output directory: {base_dir.as_posix()}")
 
 
 if __name__ == "__main__":

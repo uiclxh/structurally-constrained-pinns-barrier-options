@@ -24,7 +24,7 @@ import chapter7_ablation_failure_diagnostics_framework as demo
 class ExperimentConfig:
     seed: int = 42
     device: str = "cpu"
-    output_dir: str = "results_chapter7_real_formal"
+    output_dir: str = "results/results_chapter7_only"
     quick_mode: bool = False
     K: float = 100.0
     S0: float = 100.0
@@ -114,7 +114,7 @@ class ExperimentConfig:
 
     def __post_init__(self):
         if self.quick_mode:
-            self.output_dir = "results_chapter7_real"
+            self.output_dir = "results/results_chapter7_real"
             self.adam_epochs = 360
             self.adam_lr = 8e-4
             self.adam_gamma = 0.997
@@ -1458,12 +1458,12 @@ def main():
         "train_panel_size": len(train_scenarios),
         "valid_panel_size": len(valid_scenarios),
         "report_panel_size": len(report_scenarios),
-        "table12_csv": str((out / "table12_ablation_summary_matrix.csv").resolve()),
-        "figure17": str((out / "figure17_failure_taxonomy.png").resolve()),
-        "figure18": str((out / "figure18_training_pathology_naive_pinn.png").resolve()),
-        "figure19": str((out / "figure19_effect_coordinate_choice.png").resolve()),
-        "figure20": str((out / "figure20_effect_hard_constrained_ansatz.png").resolve()),
-        "figure21": str((out / "figure21_effect_baac.png").resolve()),
+        "table12_csv": (out / "table12_ablation_summary_matrix.csv").as_posix(),
+        "figure17": (out / "figure17_failure_taxonomy.png").as_posix(),
+        "figure18": (out / "figure18_training_pathology_naive_pinn.png").as_posix(),
+        "figure19": (out / "figure19_effect_coordinate_choice.png").as_posix(),
+        "figure20": (out / "figure20_effect_hard_constrained_ansatz.png").as_posix(),
+        "figure21": (out / "figure21_effect_baac.png").as_posix(),
     }
     with open(out / "chapter7_real_summary.json", "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2)
@@ -1478,7 +1478,7 @@ def main():
     print("  - Figure 20: ansatz ablation from real training/evaluation")
     print("  - Figure 21: BAAC ablation heatmaps from real evaluation")
     print("  - Table 12: ablation summary matrix")
-    print(f"Output directory: {out.resolve()}")
+    print(f"Output directory: {out.as_posix()}")
 
 
 if __name__ == "__main__":

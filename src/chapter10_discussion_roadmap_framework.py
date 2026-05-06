@@ -16,9 +16,9 @@ import chapter4_barrier_surrogate_framework as ch4
 
 @dataclass
 class Chapter10Config:
-    output_dir: str = "results_chapter10_only"
-    chapter8_scorecard_csv: str = r"E:\results_chapter8_only\table14_validation_scorecard.csv"
-    chapter9_runtime_table_csv: str = r"E:\results_chapter9_only\table15_runtime_inputs_break_even_summary.csv"
+    output_dir: str = "results/results_chapter10_only"
+    chapter8_scorecard_csv: str = "results/results_chapter8_only/table14_validation_scorecard.csv"
+    chapter9_runtime_table_csv: str = "results/results_chapter9_only/table15_runtime_inputs_break_even_summary.csv"
     query_volume_ticks: tuple = (1, 10, 100, 1000, 10000, 100000)
     precision_ticks: tuple = (0, 1, 2, 3)
     precision_labels: tuple = (
@@ -163,7 +163,7 @@ def plot_decision_map(cfg: Chapter10Config, runtime_df: pd.DataFrame, scorecard_
                     bbox=dict(facecolor="white", edgecolor="none", alpha=0.8, pad=0.5))
 
     note = (
-        "Interpretation:\n"
+        "Interpretation:" "\n"
         "FDM remains preferred when audit-grade precision or Greek reliability dominates.\n"
         "PINN becomes relevant when repeated-query volume grows but barrier-aware structure still matters.\n"
         "Supervised surrogates become economically attractive only when workload is very large and tolerated error is wider."
@@ -267,7 +267,7 @@ def plot_research_roadmap(out_path: Path) -> None:
     ax.add_patch(bottom)
     ax.text(
         0.50, 0.175,
-        "Overall interpretation:\n"
+        "Overall interpretation:" "\n"
         "The next stage is not wider claiming, but stronger evidence, broader operators, and more realistic products.",
         ha="center", va="center", fontsize=11, weight="bold"
     )
@@ -305,9 +305,9 @@ def main() -> None:
             "chapter9_runtime_table_csv": cfg.chapter9_runtime_table_csv,
         },
         "outputs": {
-            "figure32": str((out / "figure32_decision_map_when_to_use_which_solver.png").resolve()),
-            "figure33": str((out / "figure33_research_roadmap.png").resolve()),
-            "table17": str((out / "table17_establishes_vs_not_establishes.csv").resolve()),
+            "figure32": (out / "figure32_decision_map_when_to_use_which_solver.png").as_posix(),
+            "figure33": (out / "figure33_research_roadmap.png").as_posix(),
+            "table17": (out / "table17_establishes_vs_not_establishes.csv").as_posix(),
         },
     }
     with open(out / "chapter10_summary.json", "w", encoding="utf-8") as f:
@@ -320,7 +320,7 @@ def main() -> None:
     print("  - Figure 32: decision map")
     print("  - Figure 33: research roadmap")
     print("  - Table 17: establishes vs does not establish")
-    print(f"Output directory: {out.resolve()}")
+    print(f"Output directory: {out.as_posix()}")
 
 
 if __name__ == "__main__":

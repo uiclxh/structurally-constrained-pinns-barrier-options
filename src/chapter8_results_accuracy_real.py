@@ -23,9 +23,9 @@ import chapter7_ablation_failure_diagnostics_real as ch7
 class Chapter8Config:
     seed: int = 42
     device: str = "cuda" if torch.cuda.is_available() else "cpu"
-    output_dir: str = "results_chapter8_only"
-    pinn_model_path: str = r"E:\results_chapter7_real_formal\full_baac_guard_probe\best_model.pt"
-    pinn_variant_spec_path: str = r"E:\results_chapter7_real_formal\full_baac_guard_probe\variant_spec.json"
+    output_dir: str = "results/results_chapter8_only"
+    pinn_model_path: str = "results/results_chapter7_only/full_baac_guard_probe/best_model.pt"
+    pinn_variant_spec_path: str = "results/results_chapter7_only/full_baac_guard_probe/variant_spec.json"
     train_label_samples_per_scenario: int = 56
     valid_label_samples_per_scenario: int = 24
     supervised_epochs: int = 520
@@ -1139,14 +1139,14 @@ def main() -> None:
         "status": "chapter8 accuracy and error-control workflow prepared",
         "config": asdict(cfg),
         "outputs": {
-            "table13": str((out / "table13_main_pricing_comparison.csv").resolve()),
-            "figure22": str((out / "figure22_pricing_error_heatmaps.png").resolve()),
-            "figure23": str((out / "figure23_near_barrier_zoom_price_error_map.png").resolve()),
-            "figure24": str((out / "figure24_delta_comparison_heatmaps.png").resolve()),
-            "figure25": str((out / "figure25_gamma_heatmaps_and_slices.png").resolve()),
-            "figure26": str((out / "figure26_boundary_positivity_diagnostics.png").resolve()),
-            "figure27": str((out / "figure27_residual_diagnostics.png").resolve()),
-            "table14": str((out / "table14_validation_scorecard.csv").resolve()),
+            "table13": (out / "table13_main_pricing_comparison.csv").as_posix(),
+            "figure22": (out / "figure22_pricing_error_heatmaps.png").as_posix(),
+            "figure23": (out / "figure23_near_barrier_zoom_price_error_map.png").as_posix(),
+            "figure24": (out / "figure24_delta_comparison_heatmaps.png").as_posix(),
+            "figure25": (out / "figure25_gamma_heatmaps_and_slices.png").as_posix(),
+            "figure26": (out / "figure26_boundary_positivity_diagnostics.png").as_posix(),
+            "figure27": (out / "figure27_residual_diagnostics.png").as_posix(),
+            "table14": (out / "table14_validation_scorecard.csv").as_posix(),
         },
     }
     with open(out / "chapter8_summary.json", "w", encoding="utf-8") as f:
@@ -1164,7 +1164,7 @@ def main() -> None:
     print("  - Figure 26: boundary residual and positivity diagnostics")
     print("  - Figure 27: residual diagnostics")
     print("  - Table 14: validation scorecard")
-    print(f"Output directory: {out.resolve()}")
+    print(f"Output directory: {out.as_posix()}")
 
 
 if __name__ == "__main__":

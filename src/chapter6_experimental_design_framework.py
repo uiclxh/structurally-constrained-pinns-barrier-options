@@ -333,10 +333,10 @@ def export_summary(cfg: ExperimentalDesignConfig, output_dir: Path) -> None:
         "status": "chapter6 experimental design assets generated",
         "scenario_families": [asdict(s) for s in cfg.scenario_families],
         "baselines": [asdict(b) for b in cfg.baselines],
-        "table10_csv": str((output_dir / "table10_scenario_families.csv").resolve()),
-        "table11_csv": str((output_dir / "table11_baseline_family.csv").resolve()),
-        "figure15": str((output_dir / "figure15_scenario_matrix.png").resolve()),
-        "figure16": str((output_dir / "figure16_comparison_design_map.png").resolve()),
+        "table10_csv": (output_dir / "table10_scenario_families.csv").as_posix(),
+        "table11_csv": (output_dir / "table11_baseline_family.csv").as_posix(),
+        "figure15": (output_dir / "figure15_scenario_matrix.png").as_posix(),
+        "figure16": (output_dir / "figure16_comparison_design_map.png").as_posix(),
     }
     with open(output_dir / "chapter6_summary.json", "w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2)
@@ -344,7 +344,7 @@ def export_summary(cfg: ExperimentalDesignConfig, output_dir: Path) -> None:
 
 def main():
     cfg = default_config()
-    output_dir = Path("results_chapter6_only")
+    output_dir = Path("results/results_chapter6_only")
     ch4.ensure_dir(output_dir)
 
     export_tables(cfg, output_dir)
@@ -360,7 +360,7 @@ def main():
     print("  - Table 10: scenario families and parameter ranges")
     print("  - Table 11: baseline family")
     print("  - Figure 16: comparison design map")
-    print(f"Output directory: {output_dir.resolve()}")
+    print(f"Output directory: {output_dir.as_posix()}")
 
 
 if __name__ == "__main__":
