@@ -108,10 +108,10 @@
   "train_panel_size": 20,
   "valid_panel_size": 8,
   "report_panel_size": 14,
-  "table12_csv": "E:\\results_chapter7_real_formal\\table12_ablation_summary_matrix.csv",
-  "figure17": "E:\\results_chapter7_real_formal\\figure17_failure_taxonomy.png",
-  "figure18": "E:\\results_chapter7_real_formal\\figure18_training_pathology_naive_pinn.png",
-  "figure19": "E:\\results_chapter7_real_formal\\figure19_effect_coordinate_choice.png",
-  "figure20": "E:\\results_chapter7_real_formal\\figure20_effect_hard_constrained_ansatz.png",
-  "figure21": "E:\\results_chapter7_real_formal\\figure21_effect_baac.png"
+  "table12_csv": "results/results_chapter7_only/table12_ablation_summary_matrix.csv",
+  "figure17": "results/results_chapter7_only/figure17_failure_taxonomy.png",
+  "figure18": "results/results_chapter7_only/figure18_training_pathology_naive_pinn.png",
+  "figure19": "results/results_chapter7_only/figure19_effect_coordinate_choice.png",
+  "figure20": "results/results_chapter7_only/figure20_effect_hard_constrained_ansatz.png",
+  "figure21": "results/results_chapter7_only/figure21_effect_baac.png"
 }

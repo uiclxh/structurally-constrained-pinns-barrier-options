@@ -117,8 +117,8 @@
       "many_query_efficiency_score": 8.4
     }
   ],
-  "table10_csv": "E:\\results_chapter6_only\\table10_scenario_families.csv",
-  "table11_csv": "E:\\results_chapter6_only\\table11_baseline_family.csv",
-  "figure15": "E:\\results_chapter6_only\\figure15_scenario_matrix.png",
-  "figure16": "E:\\results_chapter6_only\\figure16_comparison_design_map.png"
+  "table10_csv": "results/results_chapter6_only/table10_scenario_families.csv",
+  "table11_csv": "results/results_chapter6_only/table11_baseline_family.csv",
+  "figure15": "results/results_chapter6_only/figure15_scenario_matrix.png",
+  "figure16": "results/results_chapter6_only/figure16_comparison_design_map.png"
 }

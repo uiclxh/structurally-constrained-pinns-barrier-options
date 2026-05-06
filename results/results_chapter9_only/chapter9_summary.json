@@ -4,11 +4,11 @@
     "seed": 42,
     "device": "cpu",
     "output_dir": "results_chapter9_only",
-    "chapter8_output_dir": "E:\\results_chapter8_only",
-    "chapter7_output_dir": "E:\\results_chapter7_real_formal",
-    "pinn_model_path": "E:\\results_chapter7_real_formal\\full_baac_guard_probe\\best_model.pt",
-    "pinn_variant_spec_path": "E:\\results_chapter7_real_formal\\full_baac_guard_probe\\variant_spec.json",
-    "supervised_model_path": "E:\\results_chapter8_only\\models\\supervised_surrogate\\best_model.pt",
+    "chapter8_output_dir": "results/results_chapter8_only",
+    "chapter7_output_dir": "results/results_chapter7_only",
+    "pinn_model_path": "results/results_chapter7_only/full_baac_guard_probe/best_model.pt",
+    "pinn_variant_spec_path": "results/results_chapter7_only/full_baac_guard_probe/variant_spec.json",
+    "supervised_model_path": "results/results_chapter8_only/models/supervised_surrogate/best_model.pt",
     "evaluation_counts": [
       1,
       10,
@@ -55,11 +55,11 @@
   "label_generation_time_s": 0.43025069999930565,
   "supervised_training_time_s": 120.0,
   "outputs": {
-    "table15": "E:\\results_chapter9_only\\table15_runtime_inputs_break_even_summary.csv",
-    "figure28": "E:\\results_chapter9_only\\figure28_total_runtime_vs_evaluations.png",
-    "figure29": "E:\\results_chapter9_only\\figure29_average_cost_per_evaluation.png",
-    "figure30": "E:\\results_chapter9_only\\figure30_batch_throughput_comparison.png",
-    "figure31": "E:\\results_chapter9_only\\figure31_use_case_barrier_risk_surface_generation.png",
-    "table16": "E:\\results_chapter9_only\\table16_use_case_economics.csv"
+    "table15": "results/results_chapter9_only/table15_runtime_inputs_break_even_summary.csv",
+    "figure28": "results/results_chapter9_only/figure28_total_runtime_vs_evaluations.png",
+    "figure29": "results/results_chapter9_only/figure29_average_cost_per_evaluation.png",
+    "figure30": "results/results_chapter9_only/figure30_batch_throughput_comparison.png",
+    "figure31": "results/results_chapter9_only/figure31_use_case_barrier_risk_surface_generation.png",
+    "table16": "results/results_chapter9_only/table16_use_case_economics.csv"
   }
 }

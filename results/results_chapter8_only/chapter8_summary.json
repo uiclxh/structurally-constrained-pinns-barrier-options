@@ -4,8 +4,8 @@
     "seed": 42,
     "device": "cpu",
     "output_dir": "results_chapter8_only",
-    "pinn_model_path": "E:\\results_chapter7_real_formal\\full_baac_guard_probe\\best_model.pt",
-    "pinn_variant_spec_path": "E:\\results_chapter7_real_formal\\full_baac_guard_probe\\variant_spec.json",
+    "pinn_model_path": "results/results_chapter7_only/full_baac_guard_probe/best_model.pt",
+    "pinn_variant_spec_path": "results/results_chapter7_only/full_baac_guard_probe/variant_spec.json",
     "train_label_samples_per_scenario": 56,
     "valid_label_samples_per_scenario": 24,
     "supervised_epochs": 520,
@@ -80,13 +80,13 @@
     "force_retrain_surrogates": true
   },
   "outputs": {
-    "table13": "E:\\results_chapter8_only\\table13_main_pricing_comparison.csv",
-    "figure22": "E:\\results_chapter8_only\\figure22_pricing_error_heatmaps.png",
-    "figure23": "E:\\results_chapter8_only\\figure23_near_barrier_zoom_price_error_map.png",
-    "figure24": "E:\\results_chapter8_only\\figure24_delta_comparison_heatmaps.png",
-    "figure25": "E:\\results_chapter8_only\\figure25_gamma_heatmaps_and_slices.png",
-    "figure26": "E:\\results_chapter8_only\\figure26_boundary_positivity_diagnostics.png",
-    "figure27": "E:\\results_chapter8_only\\figure27_residual_diagnostics.png",
-    "table14": "E:\\results_chapter8_only\\table14_validation_scorecard.csv"
+    "table13": "results/results_chapter8_only/table13_main_pricing_comparison.csv",
+    "figure22": "results/results_chapter8_only/figure22_pricing_error_heatmaps.png",
+    "figure23": "results/results_chapter8_only/figure23_near_barrier_zoom_price_error_map.png",
+    "figure24": "results/results_chapter8_only/figure24_delta_comparison_heatmaps.png",
+    "figure25": "results/results_chapter8_only/figure25_gamma_heatmaps_and_slices.png",
+    "figure26": "results/results_chapter8_only/figure26_boundary_positivity_diagnostics.png",
+    "figure27": "results/results_chapter8_only/figure27_residual_diagnostics.png",
+    "table14": "results/results_chapter8_only/table14_validation_scorecard.csv"
   }
 }
