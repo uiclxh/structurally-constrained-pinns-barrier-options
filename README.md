@@ -24,7 +24,7 @@ The project compares a strong implicit finite-difference benchmark with barrier-
 
 This is a curated reproducibility package, not a clean-room rebuild.
 
-The repository provides the final working paper, generated figures, generated tables, trained model artifacts, validation scorecards, residual diagnostics, and chapter-level summary files used by the manuscript. Some workflows can be rerun from `src/`, but the repository is not yet a fully packaged one-command software system that rebuilds every result from a fresh environment.
+The repository provides the final working paper, an extended technical appendix with full derivations, generated figures, generated tables, trained model artifacts, validation scorecards, residual diagnostics, and chapter-level summary files used by the manuscript. Some workflows can be rerun from `src/`, but the repository is not yet a fully packaged one-command software system that rebuilds every result from a fresh environment.
 
 For details, see [docs/reproducibility.md](docs/reproducibility.md).
 
@@ -64,7 +64,7 @@ Full tables are available in `results/results_chapter8_only/table14_validation_s
 
 ```text
 paper/
-  Final working paper PDF.
+  Final SSRN working paper PDF and extended technical appendix.
 
 src/
   Chapter-level Python research scripts.
@@ -162,11 +162,12 @@ powershell -ExecutionPolicy Bypass -File scripts/reproduce_all.ps1 -SkipHeavy
 
 ## Suggested Reading Order
 
-1. Read the final PDF in `paper/`.
-2. Review the validation scorecard in `results/results_chapter8_only/table14_validation_scorecard.csv`.
-3. Inspect the runtime break-even table in `results/results_chapter9_only/table15_runtime_inputs_break_even_summary.csv`.
-4. Check the decision map and roadmap in `results/results_chapter10_only/`.
-5. Use `src/README.md` if you want to trace which script generated each chapter-level output.
+1. Read the final SSRN paper in `paper/`.
+2. Use `paper/Structurally_Constrained_PINNs_for_Barrier_Option_Pricing_technical_appendix.pdf` for full derivations and extended technical details.
+3. Review the validation scorecard in `results/results_chapter8_only/table14_validation_scorecard.csv`.
+4. Inspect the runtime break-even table in `results/results_chapter9_only/table15_runtime_inputs_break_even_summary.csv`.
+5. Check the decision map and roadmap in `results/results_chapter10_only/`.
+6. Use `src/README.md` if you want to trace which script generated each chapter-level output.
 
 ## Licensing
 

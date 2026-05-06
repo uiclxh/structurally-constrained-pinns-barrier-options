@@ -90,7 +90,8 @@ From the Chapter 9 runtime analysis:
 
 The project integrates:
 
-- Final manuscript PDF from `Structurally Constrained PINNs for Barrier Option Pricing.pdf`.
+- Final SSRN manuscript PDF from `Structurally Constrained PINNs for Barrier Option Pricing.pdf`.
+- Extended technical appendix with full derivations from `Structurally_Constrained_PINNs_for_Barrier_Option_Pricing_technical_appendix.pdf`.
 - Chapter 3 results from `results_chapter3_only`.
 - Chapter 4 results from `results_chapter4_only`.
 - Chapter 5 results from `results_chapter5_only`.

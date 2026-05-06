@@ -56,7 +56,8 @@ This repository provides the reproducibility package for the SSRN working paper,
 
 The working paper and reproducibility package are built from the following local materials:
 
-- Final manuscript: `Structurally Constrained PINNs for Barrier Option Pricing.pdf`
+- Final SSRN manuscript: `Structurally Constrained PINNs for Barrier Option Pricing.pdf`
+- Extended technical appendix with full derivations: `Structurally_Constrained_PINNs_for_Barrier_Option_Pricing_technical_appendix.pdf`
 - Chapter 3 results: `results_chapter3_only`
 - Chapter 4 results: `results_chapter4_only`
 - Chapter 5 results: `results_chapter5_only`

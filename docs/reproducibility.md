@@ -12,7 +12,8 @@ The current release is a reproducibility package for reported results. It is not
 
 The repository includes:
 
-- Final working paper PDF.
+- Final SSRN working paper PDF.
+- Extended technical appendix with full derivations.
 - Chapter-level result folders from Chapter 3 through Chapter 10.
 - Generated figures in PNG format.
 - Generated tables in CSV and LaTeX format.
@@ -88,6 +89,7 @@ The repository integrates the following local materials:
 
 ```text
 Structurally Constrained PINNs for Barrier Option Pricing.pdf
+Structurally_Constrained_PINNs_for_Barrier_Option_Pricing_technical_appendix.pdf
 results_chapter3_only
 results_chapter4_only
 results_chapter5_only

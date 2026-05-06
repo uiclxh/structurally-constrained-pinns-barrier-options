@@ -64,6 +64,7 @@ jobs:
               "LICENSE",
               "docs/content-license.md",
               "CITATION.cff",
+              "paper/Structurally_Constrained_PINNs_for_Barrier_Option_Pricing_technical_appendix.pdf",
               "results/results_chapter3_only/fdm_convergence.csv",
               "results/results_chapter8_only/table13_main_pricing_comparison.csv",
               "results/results_chapter8_only/table14_validation_scorecard.csv",
