@@ -12,6 +12,8 @@ DOI: <https://doi.org/10.2139/ssrn.6628159>
 
 GitHub repository: <https://github.com/uiclxh/structurally-constrained-pinns-barrier-options>
 
+An extended technical appendix and full reproducibility package, including code, generated results, figures, tables, and trained artifacts, are available at the companion GitHub repository.
+
 ## Overview
 
 This project studies whether structurally constrained physics-informed neural networks can be made credible for continuously monitored down-and-out European call option pricing under the Black-Scholes framework.
@@ -162,8 +164,8 @@ powershell -ExecutionPolicy Bypass -File scripts/reproduce_all.ps1 -SkipHeavy
 
 ## Suggested Reading Order
 
-1. Read the final SSRN paper in `paper/`.
-2. Use `paper/Structurally_Constrained_PINNs_for_Barrier_Option_Pricing_technical_appendix.pdf` for full derivations and extended technical details.
+1. Read the SSRN working paper in `paper/` for the compressed evidence chain, research framing, method summary, and main empirical conclusions.
+2. Use `paper/Structurally_Constrained_PINNs_for_Barrier_Option_Pricing_technical_appendix.pdf` as the extended technical version with full derivations, formulas, hyperparameters, implementation details, and robustness checks.
 3. Review the validation scorecard in `results/results_chapter8_only/table14_validation_scorecard.csv`.
 4. Inspect the runtime break-even table in `results/results_chapter9_only/table15_runtime_inputs_break_even_summary.csv`.
 5. Check the decision map and roadmap in `results/results_chapter10_only/`.
